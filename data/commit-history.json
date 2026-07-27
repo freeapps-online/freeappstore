@@ -4484,5 +4484,43 @@
         }
       }
     ]
+  },
+  "freeappstore-online/dual-timezone": {
+    "meta": {
+      "created_at": "2026-07-27T08:17:33Z",
+      "pushed_at": "2026-07-27T10:41:56Z"
+    },
+    "commits": [
+      {
+        "sha": "1c92b2e3e7cc8c17bdbd086e3ccdbae1b2508c54",
+        "html_url": "https://github.com/freeappstore-online/dual-timezone/commit/1c92b2e3e7cc8c17bdbd086e3ccdbae1b2508c54",
+        "commit": {
+          "message": "fix navbar",
+          "author": {
+            "date": "2026-07-27T10:41:49Z"
+          }
+        }
+      },
+      {
+        "sha": "faa2346755959452b4a5a8358ec6b62088ab2bed",
+        "html_url": "https://github.com/freeappstore-online/dual-timezone/commit/faa2346755959452b4a5a8358ec6b62088ab2bed",
+        "commit": {
+          "message": "fix navbar",
+          "author": {
+            "date": "2026-07-27T10:38:27Z"
+          }
+        }
+      },
+      {
+        "sha": "81c28716b1a9ee1cf930b5981ab0a9d3181e4be3",
+        "html_url": "https://github.com/freeappstore-online/dual-timezone/commit/81c28716b1a9ee1cf930b5981ab0a9d3181e4be3",
+        "commit": {
+          "message": "feat: complete dual timezone app logic",
+          "author": {
+            "date": "2026-07-27T10:21:45Z"
+          }
+        }
+      }
+    ]
   }
 }
