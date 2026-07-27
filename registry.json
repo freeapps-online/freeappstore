@@ -1793,6 +1793,20 @@
       "type": "standalone",
       "developer": "FreeAppStore",
       "creatorGithub": "thatonenerdykidinclass"
+    },
+    {
+      "id": "dual-timezone",
+      "name": "dual-timezone",
+      "category": "Productivity",
+      "icon": "🚀",
+      "iconBg": "#f3f4f6",
+      "description": "Dual timezone meeting planner and clock",
+      "appUrl": "https://dual-timezone.freeappstore.online",
+      "repo": "freeappstore-online/dual-timezone",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeAppStore",
+      "creatorGithub": "wandaaulia"
     }
   ]
 }
