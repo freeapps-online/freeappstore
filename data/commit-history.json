@@ -3788,36 +3788,36 @@
   "freeappstore-online/webshare": {
     "meta": {
       "created_at": "2026-06-13T15:34:03Z",
-      "pushed_at": "2026-07-02T11:31:22Z"
+      "pushed_at": "2026-07-28T08:14:54Z"
     },
     "commits": [
       {
-        "sha": "4806ef08a117b9314d171d09492e1c9818d96f71",
-        "html_url": "https://github.com/freeappstore-online/webshare/commit/4806ef08a117b9314d171d09492e1c9818d96f71",
+        "sha": "f0d4f3717cb43f90ddb8768c38a2a6257033eb0e",
+        "html_url": "https://github.com/freeappstore-online/webshare/commit/f0d4f3717cb43f90ddb8768c38a2a6257033eb0e",
         "commit": {
-          "message": "Show code-room peers in a \"People from Share Code\" section on top\n\nReceivers who entered the share code get their own labeled section above\nthe Wi-Fi peers, separated by a line; anyone present in both rooms only\nshows there. Peer tiles/rows are now shared render helpers.\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
+          "message": "Open the file picker straight from \"Add files…\"\n\nThe window in between existed to offer a choice between files and a\nfolder. With folders gone it held a single button, so it was one extra\nclick to reach the picker the label already promised.\n\nBoth entry points — the empty-state dropzone and the header bar — now go\nstraight to the OS picker.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>",
           "author": {
-            "date": "2026-07-02T11:31:20Z"
+            "date": "2026-07-28T08:14:52Z"
           }
         }
       },
       {
-        "sha": "4d5bd8179822edde9ae6c78c55d8c1245c349b15",
-        "html_url": "https://github.com/freeappstore-online/webshare/commit/4d5bd8179822edde9ae6c78c55d8c1245c349b15",
+        "sha": "7385adc8a788c68277ee97b5af2419cd5d4538d1",
+        "html_url": "https://github.com/freeappstore-online/webshare/commit/7385adc8a788c68277ee97b5af2419cd5d4538d1",
         "commit": {
-          "message": "Add share codes: receive files across networks with a 6-digit code or QR\n\n- \"Receive files…\" button on the empty main page opens a code-entry\n  window (6 boxes, auto-advance, paste) with a QR camera scanner\n- Senders auto-host a code on the share page: shown with QR under the\n  profile on desktop, behind a \"Share via Share Code\" button on mobile\n- The code room rides on a second signaling connection so LAN discovery\n  keeps working; rosters are merged and replies route to the right socket\n- Entering a code counts as consent — requests arriving through it are\n  auto-accepted, no Accept/Decline prompt\n- QR encodes ?code= deep link, so scanning with a native camera app\n  lands straight in the sender's room\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
+          "message": "Drop folder sending\n\nIt can't be made to work the same way everywhere. Chrome blocklists common\nfolder locations (including ~/Library, where macOS keeps an iCloud-synced\nDesktop), iOS Safari has no folder picker at all and silently degrades\nwebkitdirectory to a plain file selection, and a phone can't drag one.\nEvery route out was desktop-only, so the feature was a promise the app\ncouldn't keep on half its devices.\n\nFolders are no longer staged. Dropping one adds the loose files beside it\nand says which folder was skipped and what to do instead — the old\nbehaviour staged an icon that silently sent nothing at all, which is the\nworst of both. Zipping first works today and always did: a zip is just a\nfile.\n\nThe receiver keeps its path handling. It costs nothing, it means a peer on\nan older build still lands correctly, and the path sanitising has to exist\nregardless — those paths come from the peer, so \"..\" must be neutralised\nwhether or not we ever send one.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>",
           "author": {
-            "date": "2026-07-02T11:23:08Z"
+            "date": "2026-07-28T08:10:42Z"
           }
         }
       },
       {
-        "sha": "01185ee2c57dfdba7970ddd9532c71b1d1d2a83b",
-        "html_url": "https://github.com/freeappstore-online/webshare/commit/01185ee2c57dfdba7970ddd9532c71b1d1d2a83b",
+        "sha": "3e1e24a596866613bd3a0895bf776a7eb3902957",
+        "html_url": "https://github.com/freeappstore-online/webshare/commit/3e1e24a596866613bd3a0895bf776a7eb3902957",
         "commit": {
-          "message": "Fix share-request reliability bugs found in pre-transfer audit\n\n- Trim share-req file previews to the worker's 64KB message cap so big\n  batches aren't silently dropped (sender no longer stuck on Waiting…)\n- Group IPv6 peers by /64 prefix — each device has its own address, so\n  same-network peers never met on IPv6\n- Don't bounce a fresh socket when clearHello() has nothing to retract\n- Queue incoming share requests instead of overwriting the one on screen\n- Only add outgoing \"Waiting…\" entries when the send actually went out,\n  and clear the ghost roster while disconnected\n- Don't let a crossing share-resp overwrite a withdrawn request\n- Clear staged share files and discoverability on profile reset\n- Clamp untrusted peer payload fields before rendering\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
+          "message": "Offer drag & drop when Chrome blocklists the chosen folder\n\nChrome's \"can't open this folder because it contains system files\" isn't\nthe result of inspecting anything — it's a fixed list of locations. That\nlist includes ~/Library, which is where macOS actually keeps Desktop and\nDocuments once iCloud Drive syncs them, so entirely ordinary folders get\nrefused and the message misleads about why.\n\nDrag & drop reads folders through webkitGetAsEntry, which isn't\nblocklisted, so it works on precisely the folders the picker rejects. That\nwas already the case but only mentioned in fine print. Now a blocked\nfolder replaces the dead-end picker with a labelled drop target that\nlights up on drag-over, and explains that dragging uses a permission\nChrome doesn't restrict.\n\nVerified in Chrome with the picker stubbed to reject the way it really\ndoes.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>",
           "author": {
-            "date": "2026-07-02T01:40:24Z"
+            "date": "2026-07-28T07:40:09Z"
           }
         }
       }
