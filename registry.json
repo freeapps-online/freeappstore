@@ -1807,6 +1807,20 @@
       "type": "standalone",
       "developer": "FreeAppStore",
       "creatorGithub": "wandaaulia"
+    },
+    {
+      "id": "instrument-tuner",
+      "name": "instrument-tuner",
+      "category": "Utilities",
+      "icon": "🚀",
+      "iconBg": "#f3f4f6",
+      "description": "Free offline instrument tuner for guitar, violin, cello, ukulele, and bass -- no install, no account, mic audio never leaves your browser.",
+      "appUrl": "https://instrument-tuner.freeappstore.online",
+      "repo": "freeappstore-online/instrument-tuner",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeAppStore",
+      "creatorGithub": "abid8195"
     }
   ]
 }
