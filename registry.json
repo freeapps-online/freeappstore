@@ -1821,6 +1821,20 @@
       "type": "standalone",
       "developer": "FreeAppStore",
       "creatorGithub": "abid8195"
+    },
+    {
+      "id": "a11y-fixlist",
+      "name": "a11y-fixlist",
+      "category": "Utilities",
+      "icon": "🚀",
+      "iconBg": "#f3f4f6",
+      "description": "A lightweight accessibility checklist tool that scans common webpage issues and turns them into a developer-friendly fix list with suggested improvements.",
+      "appUrl": "https://a11y-fixlist.freeappstore.online",
+      "repo": "freeappstore-online/a11y-fixlist",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeAppStore",
+      "creatorGithub": "esmelui"
     }
   ]
 }
