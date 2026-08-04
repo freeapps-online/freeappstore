@@ -3788,36 +3788,36 @@
   "freeappstore-online/webshare": {
     "meta": {
       "created_at": "2026-06-13T15:34:03Z",
-      "pushed_at": "2026-08-04T03:14:56Z"
+      "pushed_at": "2026-08-04T04:14:15Z"
     },
     "commits": [
       {
-        "sha": "d663f9823b1f56dc37c27a69bc9024df8b448a61",
-        "html_url": "https://github.com/freeappstore-online/webshare/commit/d663f9823b1f56dc37c27a69bc9024df8b448a61",
+        "sha": "316ea812553a0b551efd5a2b3cb10491ee5058cd",
+        "html_url": "https://github.com/freeappstore-online/webshare/commit/316ea812553a0b551efd5a2b3cb10491ee5058cd",
         "commit": {
-          "message": "Never hand over a file that arrived short\n\nReported: a received file was 0 bytes, from a transfer both sides called a\nsuccess. Nothing checked that what arrived matched what was promised, so an\nempty file was indistinguishable from a real one.\n\nThree guards, at each point where the size could diverge:\n\nThe sender now compares what it actually read for each file against the\nsize it announced, and fails if they differ. A File handle can go stale\nbetween being staged and being read — a photo picked on iOS then\nbackgrounded is the usual way — and it reads as empty afterwards, which\nproduced exactly this: a full-speed transfer of nothing. It also refuses to\nannounce a file that is already unreadable alongside files that are fine.\n\nThe receiver refuses to close a file whose byte count falls short of the\nmanifest. Closing is what commits a FileSystemWritableFileStream, so\nclosing early is precisely how a swap file becomes a truncated real one.\n\nThe manifest also now goes over every link rather than one. Chunks pick the\nidlest link, so they could overtake a manifest sent down a slow one, and\nchunks that arrived first were buffered with anything past a fixed count\nsilently dropped. That path is bounded by bytes now and errors rather than\ndiscarding.\n\nHonest about coverage: the stale-handle case is reproduced by a test and\nfixed. The manifest race is real but I could not make it produce your\nsymptom, so it is hardened rather than confirmed as the cause.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>",
+          "message": "Trust ICE's own verdict over a pair list the browser has cleared\n\nA trace showed ICE reaching checking, running for fifteen seconds, then\nreporting failed on both links — while the report said \"no candidate pairs\nwere formed at all\" and asked the reader to go and look at the events.\nSafari drops the candidate-pair list once a connection fails, so counting\npairs after the fact measures nothing.\n\nICE reaching checking and then failing is conclusive on its own: every\naddress both sides offered was tested and none worked. That is neither a\ntimeout nor a missing candidate, and the report now says so, along with the\none thing that does help — a network that permits client-to-client traffic,\nsuch as a personal hotspot.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>",
           "author": {
-            "date": "2026-08-04T03:14:55Z"
+            "date": "2026-08-04T04:14:13Z"
           }
         }
       },
       {
-        "sha": "5a0a5fa8cf524f00245d7fff0d58f5f68f744e94",
-        "html_url": "https://github.com/freeappstore-online/webshare/commit/5a0a5fa8cf524f00245d7fff0d58f5f68f744e94",
+        "sha": "6233f21ee672bb3cdda01b246be95fe3f0dee865",
+        "html_url": "https://github.com/freeappstore-online/webshare/commit/6233f21ee672bb3cdda01b246be95fe3f0dee865",
         "commit": {
-          "message": "Keep diagnostics out of the way of ordinary users\n\nThe transfer report was always collected and always logged. Two costs: a\nconsole dump nobody asked for, and a getStats() poll across every link four\ntimes a second for the whole transfer — real work on the device least able\nto spare it.\n\nIt is now off unless it is wanted: on in development, and switchable on in\nproduction with localStorage['webshare:debug'] = '1', which is what made\nthe last several fixes findable on real hardware. With it off nothing is\nsampled, nothing is logged, and the report buttons have nothing to show so\nthey do not render. A report stored during a debugging session no longer\nreappears once the flag is cleared.\n\nAlso guarded the import.meta.env read, which only exists under Vite and\nthrew the moment this module was loaded anywhere else.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>",
+          "message": "Wait for a connection that is still being negotiated\n\nThe two reports from the same failed attempt disagreed, and the phone's was\nthe honest one: four candidate pairs, none failed, all \"in-progress\", with\nICE at checking and the connection at connecting. Nothing had gone wrong —\nthe fifteen second timer fired while negotiation was still under way and\nkilled it.\n\nThe short timeout now only applies when ICE has nothing to show. While it\nis checking, or the connection is still coming up, the wait extends in five\nsecond steps to a hard limit of a minute. On a busy public network with\nmDNS lookups in the path, checking legitimately takes longer than fifteen\nseconds.\n\nThe verdict also stopped reading \"0 succeeded\" as \"all failed\". Pairs still\nbeing checked are counted and reported separately, because the difference\nbetween a network that refused the traffic and a negotiation that ran out\nof time is the whole question, and calling the second one client isolation\nwas wrong twice over.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>",
           "author": {
-            "date": "2026-07-28T13:52:45Z"
+            "date": "2026-08-04T04:06:03Z"
           }
         }
       },
       {
-        "sha": "006c26a7240d4d878b4eea0033f80e89925efd78",
-        "html_url": "https://github.com/freeappstore-online/webshare/commit/006c26a7240d4d878b4eea0033f80e89925efd78",
+        "sha": "8160954514b6cfd3418c0c47af6d0291cebe555c",
+        "html_url": "https://github.com/freeappstore-online/webshare/commit/8160954514b6cfd3418c0c47af6d0291cebe555c",
         "commit": {
-          "message": "Stop the sender flooding its own queue at the start of a transfer\n\nObserved as a transfer that starts at a normal speed, collapses for about\nten seconds, then settles. The trace shows why: round-trip time begins at\n48 ms, climbs through 1.3 s, 2.5 s and 4.8 s while almost nothing moves,\nthen drops back to 9 ms as it recovers. Delay like that between two devices\nin one room is not the link failing, it is a queue we filled.\n\nThe backpressure limit was a fixed 4 MB. That is a fifth of a second of\ndata on a fast link and eight seconds on a slow one, so on this link the\nsender pushed eight seconds of data into a buffer nothing could drain,\nwaited out the delay it had created, took the loss that followed, and lost\nits window. The early collapse is the overshoot; the recovery is the queue\ndraining.\n\nThe limit is now half a second of measured throughput, floored at 256 KB\nand capped at the old 4 MB, so it adapts to whatever the link turns out to\nbe and starts conservative rather than guessing high. The drain threshold\ncomes down to match.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>",
+          "message": "Name the one-sided mDNS case in the connection report\n\nA trace from a library network showed both offers received, both answers\nsent, then fifteen seconds of nothing: no ICE state change, no rejected\ncandidate, no pair. The remote candidates were .local mDNS names and ours\nwere not, which is the specific shape worth naming — this device has to\nresolve those names over the network to get an address, and forming no pair\nat all means the lookups came back empty.\n\nThe report now says that, and says what it does not know: our own address\nwent out in the clear, so the other device may still be able to reach us,\nand only its report can say whether it managed to. If neither side formed\npairs the network is keeping its clients apart as well, and nothing in the\napp reaches across that.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>",
           "author": {
-            "date": "2026-07-28T13:41:35Z"
+            "date": "2026-08-04T04:00:26Z"
           }
         }
       }
