@@ -1933,6 +1933,20 @@
       "type": "standalone",
       "developer": "FreeAppStore",
       "creatorGithub": "OperationBannana"
+    },
+    {
+      "id": "habitquest-rpg",
+      "name": "habitquest-rpg",
+      "category": "Lifestyle",
+      "icon": "🚀",
+      "iconBg": "#f3f4f6",
+      "description": "Turn your daily habits into a 16-bit RPG — earn XP, buy pixel gear, and face the Midnight Reckoning if you skip.",
+      "appUrl": "https://habitquest-rpg.freeappstore.online",
+      "repo": "freeappstore-online/habitquest-rpg",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeAppStore",
+      "creatorGithub": "imhappyamber-design"
     }
   ]
 }
