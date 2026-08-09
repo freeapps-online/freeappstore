@@ -1849,6 +1849,20 @@
       "type": "standalone",
       "developer": "FreeAppStore",
       "creatorGithub": "buildlessonline-spec"
+    },
+    {
+      "id": "asmr-boards",
+      "name": "asmr-boards",
+      "category": "Lifestyle",
+      "icon": "🚀",
+      "iconBg": "#f3f4f6",
+      "description": "Six magical ASMR worlds to tap, click and relax in — from Pastel Dreams to Mystery, each with unique sounds and visuals.",
+      "appUrl": "https://asmr-boards.freeappstore.online",
+      "repo": "freeappstore-online/asmr-boards",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeAppStore",
+      "creatorGithub": "BUDDY-KIWI-BERRY"
     }
   ]
 }
