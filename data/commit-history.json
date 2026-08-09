@@ -4162,5 +4162,753 @@
         }
       }
     ]
+  },
+  "freeappstore-online/my-todo-app-2": {
+    "meta": {
+      "created_at": "2026-07-19T04:49:27Z",
+      "pushed_at": "2026-07-19T04:49:38Z"
+    },
+    "commits": [
+      {
+        "sha": "9db9b52e5f23ae733049e43ef06fb59bd39958d2",
+        "html_url": "https://github.com/freeappstore-online/my-todo-app-2/commit/9db9b52e5f23ae733049e43ef06fb59bd39958d2",
+        "commit": {
+          "message": "Initial app — built with FreeAppStore AI agent",
+          "author": {
+            "date": "2026-07-19T04:49:37Z"
+          }
+        }
+      },
+      {
+        "sha": "d97cdad88b7c693770bd9cbff9b74703d9d5b27e",
+        "html_url": "https://github.com/freeappstore-online/my-todo-app-2/commit/d97cdad88b7c693770bd9cbff9b74703d9d5b27e",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-19T04:49:27Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/my-todos": {
+    "meta": {
+      "created_at": "2026-07-19T05:24:06Z",
+      "pushed_at": "2026-07-19T05:24:19Z"
+    },
+    "commits": [
+      {
+        "sha": "86f20682ec61c43e4aaeafbf2f509c996043f9de",
+        "html_url": "https://github.com/freeappstore-online/my-todos/commit/86f20682ec61c43e4aaeafbf2f509c996043f9de",
+        "commit": {
+          "message": "Initial app — built with FreeAppStore AI agent",
+          "author": {
+            "date": "2026-07-19T05:24:18Z"
+          }
+        }
+      },
+      {
+        "sha": "d91a74012c655ea2d773aa45802d6a204778ecbc",
+        "html_url": "https://github.com/freeappstore-online/my-todos/commit/d91a74012c655ea2d773aa45802d6a204778ecbc",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-19T05:24:07Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/dual-timezone": {
+    "meta": {
+      "created_at": "2026-07-27T08:17:33Z",
+      "pushed_at": "2026-07-27T10:41:56Z"
+    },
+    "commits": [
+      {
+        "sha": "1c92b2e3e7cc8c17bdbd086e3ccdbae1b2508c54",
+        "html_url": "https://github.com/freeappstore-online/dual-timezone/commit/1c92b2e3e7cc8c17bdbd086e3ccdbae1b2508c54",
+        "commit": {
+          "message": "fix navbar",
+          "author": {
+            "date": "2026-07-27T10:41:49Z"
+          }
+        }
+      },
+      {
+        "sha": "faa2346755959452b4a5a8358ec6b62088ab2bed",
+        "html_url": "https://github.com/freeappstore-online/dual-timezone/commit/faa2346755959452b4a5a8358ec6b62088ab2bed",
+        "commit": {
+          "message": "fix navbar",
+          "author": {
+            "date": "2026-07-27T10:38:27Z"
+          }
+        }
+      },
+      {
+        "sha": "81c28716b1a9ee1cf930b5981ab0a9d3181e4be3",
+        "html_url": "https://github.com/freeappstore-online/dual-timezone/commit/81c28716b1a9ee1cf930b5981ab0a9d3181e4be3",
+        "commit": {
+          "message": "feat: complete dual timezone app logic",
+          "author": {
+            "date": "2026-07-27T10:21:45Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/pizza-maker-game": {
+    "meta": {
+      "created_at": "2026-07-19T05:29:32Z",
+      "pushed_at": "2026-07-19T06:12:20Z"
+    },
+    "commits": [
+      {
+        "sha": "b3a5a58ee759614372d860ee1938f43eafb45e28",
+        "html_url": "https://github.com/freeappstore-online/pizza-maker-game/commit/b3a5a58ee759614372d860ee1938f43eafb45e28",
+        "commit": {
+          "message": "Revamp toppings: SVG-drawn sauce/cheese spreads, pepperoni dots, sliced mushroom/onion/pepper; rich baked pizza visual with golden crust, char spots, melted cheese blobs and sheen",
+          "author": {
+            "date": "2026-07-19T06:12:20Z"
+          }
+        }
+      },
+      {
+        "sha": "efba8c1af9a628f09cc486aef726f0d60a8af1d6",
+        "html_url": "https://github.com/freeappstore-online/pizza-maker-game/commit/efba8c1af9a628f09cc486aef726f0d60a8af1d6",
+        "commit": {
+          "message": "Initial app — built with FreeAppStore AI agent",
+          "author": {
+            "date": "2026-07-19T05:29:44Z"
+          }
+        }
+      },
+      {
+        "sha": "fa5e7f556509480245a5b43d1b14d2eee2a24941",
+        "html_url": "https://github.com/freeappstore-online/pizza-maker-game/commit/fa5e7f556509480245a5b43d1b14d2eee2a24941",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-19T05:29:33Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/face-morpher": {
+    "meta": {
+      "created_at": "2026-07-11T09:19:59Z",
+      "pushed_at": "2026-07-12T09:36:34Z"
+    },
+    "commits": [
+      {
+        "sha": "bc5864b12247787adc2a8d19750acc0827938470",
+        "html_url": "https://github.com/freeappstore-online/face-morpher/commit/bc5864b12247787adc2a8d19750acc0827938470",
+        "commit": {
+          "message": "Fix tracking: draw video unmirrored on canvas, mirror canvas via CSS scaleX(-1) so landmarks and video pixels are always in the same coordinate space",
+          "author": {
+            "date": "2026-07-12T09:36:33Z"
+          }
+        }
+      },
+      {
+        "sha": "ce7e9977a1bbba917378da749c505879ccbee9d8",
+        "html_url": "https://github.com/freeappstore-online/face-morpher/commit/ce7e9977a1bbba917378da749c505879ccbee9d8",
+        "commit": {
+          "message": "Fix landmark tracking: use safe mesh indices, correct mirror transform, effectRef for render loop, proper eye centre calculation",
+          "author": {
+            "date": "2026-07-12T09:05:45Z"
+          }
+        }
+      },
+      {
+        "sha": "973040cfb3d353b2a509f6e39ba216ab7829cd47",
+        "html_url": "https://github.com/freeappstore-online/face-morpher/commit/973040cfb3d353b2a509f6e39ba216ab7829cd47",
+        "commit": {
+          "message": "Fix squish/stretch blending, add cute eyes, heart eyes, sunglasses, dog mask, clown nose, crown, fire eyes overlays",
+          "author": {
+            "date": "2026-07-12T08:52:53Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/smart-study-coach": {
+    "meta": {
+      "created_at": "2026-07-19T06:41:55Z",
+      "pushed_at": "2026-07-19T06:50:58Z"
+    },
+    "commits": [
+      {
+        "sha": "90566e414dd3d190380225ceafa4e8710611ba9a",
+        "html_url": "https://github.com/freeappstore-online/smart-study-coach/commit/90566e414dd3d190380225ceafa4e8710611ba9a",
+        "commit": {
+          "message": "fix: add missing @freeappstore/sdk dependency (build was failing)\n\nApp.tsx imports initApp + useAuth from @freeappstore/sdk but the package was\nnever listed in web/package.json, so `vite build` failed to resolve it and the\nR2 deploy never produced output (site 404'd). Add the published SDK dep.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-07-19T06:50:56Z"
+          }
+        }
+      },
+      {
+        "sha": "a19e6154129897b988418b6d4eab8c9d5786cc43",
+        "html_url": "https://github.com/freeappstore-online/smart-study-coach/commit/a19e6154129897b988418b6d4eab8c9d5786cc43",
+        "commit": {
+          "message": "Initial app — built with FreeAppStore AI agent",
+          "author": {
+            "date": "2026-07-19T06:42:13Z"
+          }
+        }
+      },
+      {
+        "sha": "c6558a40897ba34a2fc1b89ea71bfb35f2c1df10",
+        "html_url": "https://github.com/freeappstore-online/smart-study-coach/commit/c6558a40897ba34a2fc1b89ea71bfb35f2c1df10",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-19T06:41:56Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/petdo": {
+    "meta": {
+      "created_at": "2026-07-19T05:15:23Z",
+      "pushed_at": "2026-07-19T06:23:53Z"
+    },
+    "commits": [
+      {
+        "sha": "87ed3464d954f4d8a77e3fb934eb224b691da668",
+        "html_url": "https://github.com/freeappstore-online/petdo/commit/87ed3464d954f4d8a77e3fb934eb224b691da668",
+        "commit": {
+          "message": "Add per-task coin rewards (1–20), colour-coded difficulty, coin stepper on each task row",
+          "author": {
+            "date": "2026-07-19T06:23:51Z"
+          }
+        }
+      },
+      {
+        "sha": "3d6714848f23d46a7c6926da9699a974abe52923",
+        "html_url": "https://github.com/freeappstore-online/petdo/commit/3d6714848f23d46a7c6926da9699a974abe52923",
+        "commit": {
+          "message": "Add overfeed stages: overfed/stuffed/critical emotions + explosion death",
+          "author": {
+            "date": "2026-07-19T05:27:17Z"
+          }
+        }
+      },
+      {
+        "sha": "77f8aa6fd649f899d72ea9332a882883556f1481",
+        "html_url": "https://github.com/freeappstore-online/petdo/commit/77f8aa6fd649f899d72ea9332a882883556f1481",
+        "commit": {
+          "message": "Initial app — built with FreeAppStore AI agent",
+          "author": {
+            "date": "2026-07-19T05:15:35Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/bill-reminders": {
+    "meta": {
+      "created_at": "2026-08-09T05:52:28Z",
+      "pushed_at": "2026-08-09T06:15:50Z"
+    },
+    "commits": [
+      {
+        "sha": "a63285d55aeef37e6c6b7fcf21bf0ea07a9f67b1",
+        "html_url": "https://github.com/freeappstore-online/bill-reminders/commit/a63285d55aeef37e6c6b7fcf21bf0ea07a9f67b1",
+        "commit": {
+          "message": "Switch currency from USD to AUD (Australian dollars)",
+          "author": {
+            "date": "2026-08-09T06:15:49Z"
+          }
+        }
+      },
+      {
+        "sha": "a2fbe95dfc9307e0101585b083208c7c1682db4d",
+        "html_url": "https://github.com/freeappstore-online/bill-reminders/commit/a2fbe95dfc9307e0101585b083208c7c1682db4d",
+        "commit": {
+          "message": "Remove demo bills - start empty, only show user-added bills. Add quick-add presets on empty home screen.",
+          "author": {
+            "date": "2026-08-09T06:11:24Z"
+          }
+        }
+      },
+      {
+        "sha": "111ce86aee396212b20fb3e3b2ad8ea05134601e",
+        "html_url": "https://github.com/freeappstore-online/bill-reminders/commit/111ce86aee396212b20fb3e3b2ad8ea05134601e",
+        "commit": {
+          "message": "Add home page with dashboard, spending breakdown, urgent bills, and nav",
+          "author": {
+            "date": "2026-08-09T06:01:57Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/chore-list": {
+    "meta": {
+      "created_at": "2026-08-09T05:47:35Z",
+      "pushed_at": "2026-08-09T05:47:52Z"
+    },
+    "commits": [
+      {
+        "sha": "ca4f86ec771b2a9564d42deca4b8d164eaa96024",
+        "html_url": "https://github.com/freeappstore-online/chore-list/commit/ca4f86ec771b2a9564d42deca4b8d164eaa96024",
+        "commit": {
+          "message": "Initial app — built with FreeAppStore AI agent",
+          "author": {
+            "date": "2026-08-09T05:47:51Z"
+          }
+        }
+      },
+      {
+        "sha": "8e53c2879adc11f2331a66e8d93a4275ae1d0268",
+        "html_url": "https://github.com/freeappstore-online/chore-list/commit/8e53c2879adc11f2331a66e8d93a4275ae1d0268",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-08-09T05:47:36Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/room-bloom": {
+    "meta": {
+      "created_at": "2026-08-09T05:13:31Z",
+      "pushed_at": "2026-08-09T05:38:00Z"
+    },
+    "commits": [
+      {
+        "sha": "8ec3052747224eacb906fe812d18d1302f0ae9cf",
+        "html_url": "https://github.com/freeappstore-online/room-bloom/commit/8ec3052747224eacb906fe812d18d1302f0ae9cf",
+        "commit": {
+          "message": "Full RPG quest system: missions with objectives, difficulty levels, quest map with unlockable areas, completion screen with confetti, mystery boxes, XP levels, badges, inventory",
+          "author": {
+            "date": "2026-08-09T05:37:59Z"
+          }
+        }
+      },
+      {
+        "sha": "8a247b2dc81766de9ae97e45e5f480780ecf2b89",
+        "html_url": "https://github.com/freeappstore-online/room-bloom/commit/8a247b2dc81766de9ae97e45e5f480780ecf2b89",
+        "commit": {
+          "message": "Rebuild as Home Quest: user-created chore reminders with browser notifications, points, streaks, badges, and daily quest tracking",
+          "author": {
+            "date": "2026-08-09T05:26:22Z"
+          }
+        }
+      },
+      {
+        "sha": "2272292e0a065f389aa18eb823f02801527a16ce",
+        "html_url": "https://github.com/freeappstore-online/room-bloom/commit/2272292e0a065f389aa18eb823f02801527a16ce",
+        "commit": {
+          "message": "Initial app — built with FreeAppStore AI agent",
+          "author": {
+            "date": "2026-08-09T05:13:46Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/colour-timer": {
+    "meta": {
+      "created_at": "2026-07-19T06:35:16Z",
+      "pushed_at": "2026-07-19T06:50:47Z"
+    },
+    "commits": [
+      {
+        "sha": "8023cd6b177ea5197f4a63ef1fcbf657ce2676f5",
+        "html_url": "https://github.com/freeappstore-online/colour-timer/commit/8023cd6b177ea5197f4a63ef1fcbf657ce2676f5",
+        "commit": {
+          "message": "Add background patterns + explosion animation when countdown finishes",
+          "author": {
+            "date": "2026-07-19T06:50:46Z"
+          }
+        }
+      },
+      {
+        "sha": "b502a71c9d199abb1acade4f7c7ceda385750e68",
+        "html_url": "https://github.com/freeappstore-online/colour-timer/commit/b502a71c9d199abb1acade4f7c7ceda385750e68",
+        "commit": {
+          "message": "Initial app — built with FreeAppStore AI agent",
+          "author": {
+            "date": "2026-07-19T06:35:28Z"
+          }
+        }
+      },
+      {
+        "sha": "35de58c2734029dc41e64bcd442a5cb799cbe90d",
+        "html_url": "https://github.com/freeappstore-online/colour-timer/commit/35de58c2734029dc41e64bcd442a5cb799cbe90d",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-07-19T06:35:17Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/votepool": {
+    "meta": {
+      "created_at": "2026-08-09T02:53:32Z",
+      "pushed_at": "2026-08-09T06:49:54Z"
+    },
+    "commits": [
+      {
+        "sha": "e0cce6676132e48476750ef3a5df4103df3123fe",
+        "html_url": "https://github.com/freeappstore-online/votepool/commit/e0cce6676132e48476750ef3a5df4103df3123fe",
+        "commit": {
+          "message": "Rewrite: encode full poll in share URL (base64), localStorage only - no KV/auth needed, always works",
+          "author": {
+            "date": "2026-08-09T06:49:53Z"
+          }
+        }
+      },
+      {
+        "sha": "a80882b76d6629d4b11752dc8e8e8c4a0f86da00",
+        "html_url": "https://github.com/freeappstore-online/votepool/commit/a80882b76d6629d4b11752dc8e8e8c4a0f86da00",
+        "commit": {
+          "message": "Fix: capture poll ID once on mount, never show error without a poll link, clean up init logic",
+          "author": {
+            "date": "2026-08-09T06:03:16Z"
+          }
+        }
+      },
+      {
+        "sha": "31b2afc50822869c7bf418c30269ae01b03b807d",
+        "html_url": "https://github.com/freeappstore-online/votepool/commit/31b2afc50822869c7bf418c30269ae01b03b807d",
+        "commit": {
+          "message": "Better expired poll message with Create New Poll CTA; clean URL on not-found",
+          "author": {
+            "date": "2026-08-09T05:18:21Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/focus-timer": {
+    "meta": {
+      "created_at": "2026-07-19T06:16:35Z",
+      "pushed_at": "2026-07-19T07:17:27Z"
+    },
+    "commits": [
+      {
+        "sha": "cbcb78a2ea99eebd15996d49788c8ab2f85e0e14",
+        "html_url": "https://github.com/freeappstore-online/focus-timer/commit/cbcb78a2ea99eebd15996d49788c8ab2f85e0e14",
+        "commit": {
+          "message": "Tap any reminder chip to open detail popup with delete button (with confirm step) — works in week, month and reminders views",
+          "author": {
+            "date": "2026-07-19T07:17:27Z"
+          }
+        }
+      },
+      {
+        "sha": "db465305b400ce1146b5e2262ba83d6e8454dfdc",
+        "html_url": "https://github.com/freeappstore-online/focus-timer/commit/db465305b400ce1146b5e2262ba83d6e8454dfdc",
+        "commit": {
+          "message": "Colourful pastel theme — lavender base, pastel reminder chips, gradient buttons, tinted day columns",
+          "author": {
+            "date": "2026-07-19T07:12:21Z"
+          }
+        }
+      },
+      {
+        "sha": "80cbef4c3a9e38796e251dd07bde1b090bb2f794",
+        "html_url": "https://github.com/freeappstore-online/focus-timer/commit/80cbef4c3a9e38796e251dd07bde1b090bb2f794",
+        "commit": {
+          "message": "Add minute picker on slot tap + notification sound when reminder time hits",
+          "author": {
+            "date": "2026-07-19T07:02:17Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/a11y-fixlist": {
+    "meta": {
+      "created_at": "2026-08-03T01:45:59Z",
+      "pushed_at": "2026-08-03T06:32:17Z"
+    },
+    "commits": [
+      {
+        "sha": "f4c120c9263929f457e080db6e250f306a1154c1",
+        "html_url": "https://github.com/freeappstore-online/a11y-fixlist/commit/f4c120c9263929f457e080db6e250f306a1154c1",
+        "commit": {
+          "message": "Initial commit with mock dashboard",
+          "author": {
+            "date": "2026-08-03T01:46:38Z"
+          }
+        }
+      },
+      {
+        "sha": "f1ec843ba0e565333b37a4f6d1aa69ff7fb5c651",
+        "html_url": "https://github.com/freeappstore-online/a11y-fixlist/commit/f1ec843ba0e565333b37a4f6d1aa69ff7fb5c651",
+        "commit": {
+          "message": "Initial commit from standalone template",
+          "author": {
+            "date": "2026-07-28T04:36:23Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/bag-buddy": {
+    "meta": {
+      "created_at": "2026-08-09T05:54:00Z",
+      "pushed_at": "2026-08-09T06:39:18Z"
+    },
+    "commits": [
+      {
+        "sha": "c3a4a594b101f069f46f9dc2af3c739a9b30dc8a",
+        "html_url": "https://github.com/freeappstore-online/bag-buddy/commit/c3a4a594b101f069f46f9dc2af3c739a9b30dc8a",
+        "commit": {
+          "message": "Add reward system with stars, parent-editable rewards, child read-only view, history log",
+          "author": {
+            "date": "2026-08-09T06:39:18Z"
+          }
+        }
+      },
+      {
+        "sha": "f2997249b134154b94509f60d051aa6014c1f0b0",
+        "html_url": "https://github.com/freeappstore-online/bag-buddy/commit/f2997249b134154b94509f60d051aa6014c1f0b0",
+        "commit": {
+          "message": "Add welcome screen with child/parent role selection, role-based navigation and switch role banner",
+          "author": {
+            "date": "2026-08-09T06:34:00Z"
+          }
+        }
+      },
+      {
+        "sha": "10352b5e95e109c8211646f0f812dc314adf94ce",
+        "html_url": "https://github.com/freeappstore-online/bag-buddy/commit/10352b5e95e109c8211646f0f812dc314adf94ce",
+        "commit": {
+          "message": "Add Parent View with packing progress, missing items, timetable summary and reset button",
+          "author": {
+            "date": "2026-08-09T06:26:51Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/asmr-keyboard": {
+    "meta": {
+      "created_at": "2026-08-09T06:41:27Z",
+      "pushed_at": "2026-08-09T07:53:01Z"
+    },
+    "commits": [
+      {
+        "sha": "daa28dde0451945b717121fe934c25ab1ceb926f",
+        "html_url": "https://github.com/freeappstore-online/asmr-keyboard/commit/daa28dde0451945b717121fe934c25ab1ceb926f",
+        "commit": {
+          "message": "Realistic per-theme sounds: honey=crisp clicker thock, cloud=airy cottony breath, mystery=soft glowy whisper, crystal=icy crackle+ring, candy=hard crunch pop, pastel=clean balanced thock",
+          "author": {
+            "date": "2026-08-09T07:53:01Z"
+          }
+        }
+      },
+      {
+        "sha": "2ec47885985f50ba601400904fddbc8500d092e2",
+        "html_url": "https://github.com/freeappstore-online/asmr-keyboard/commit/2ec47885985f50ba601400904fddbc8500d092e2",
+        "commit": {
+          "message": "Honey goo spread all over board (blobs, streaks, pools everywhere) + completely reworked per-theme sounds",
+          "author": {
+            "date": "2026-08-09T07:17:25Z"
+          }
+        }
+      },
+      {
+        "sha": "2b27db6f8a59be02fd9a4ad90885ea201ca160fd",
+        "html_url": "https://github.com/freeappstore-online/asmr-keyboard/commit/2b27db6f8a59be02fd9a4ad90885ea201ca160fd",
+        "commit": {
+          "message": "Pre-fill honey goo on load + add theme charms (clouds, candy, snowflakes, orbs)",
+          "author": {
+            "date": "2026-08-09T06:54:51Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/family-hub": {
+    "meta": {
+      "created_at": "2026-08-09T05:51:40Z",
+      "pushed_at": "2026-08-09T07:08:50Z"
+    },
+    "commits": [
+      {
+        "sha": "79dc931f454b011d895e2176c1d14b00e84782aa",
+        "html_url": "https://github.com/freeappstore-online/family-hub/commit/79dc931f454b011d895e2176c1d14b00e84782aa",
+        "commit": {
+          "message": "Add Bills section with due dates, recurring bills, paid/overdue tracking, notifications; upgrade TodoList with due date badges and notifications; update HomeDashboard with bills widget and overdue alerts",
+          "author": {
+            "date": "2026-08-09T07:08:49Z"
+          }
+        }
+      },
+      {
+        "sha": "f0ef828bf9eac3cf80fa3f6c00cf85d42fd9114e",
+        "html_url": "https://github.com/freeappstore-online/family-hub/commit/f0ef828bf9eac3cf80fa3f6c00cf85d42fd9114e",
+        "commit": {
+          "message": "Update emergency numbers to Australian: 000, 131 444 (Police), 13 11 26 (Poison Control)",
+          "author": {
+            "date": "2026-08-09T06:12:36Z"
+          }
+        }
+      },
+      {
+        "sha": "9f61105692995557f935ee66e139badf53c83eed",
+        "html_url": "https://github.com/freeappstore-online/family-hub/commit/9f61105692995557f935ee66e139badf53c83eed",
+        "commit": {
+          "message": "Initial app — built with FreeAppStore AI agent",
+          "author": {
+            "date": "2026-08-09T05:51:57Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/my-todo-app-3": {
+    "meta": {
+      "created_at": "2026-07-19T06:15:31Z",
+      "pushed_at": "2026-07-19T06:45:02Z"
+    },
+    "commits": [
+      {
+        "sha": "5dc16448ca96d887d5f71fcff2f85a8599640906",
+        "html_url": "https://github.com/freeappstore-online/my-todo-app-3/commit/5dc16448ca96d887d5f71fcff2f85a8599640906",
+        "commit": {
+          "message": "Fix sound: replace broken external MP3 URLs with Web Audio API procedural sound generation",
+          "author": {
+            "date": "2026-07-19T06:45:02Z"
+          }
+        }
+      },
+      {
+        "sha": "7cbdeee2a00e5e9e6310b9c4f1626f6f87e247bc",
+        "html_url": "https://github.com/freeappstore-online/my-todo-app-3/commit/7cbdeee2a00e5e9e6310b9c4f1626f6f87e247bc",
+        "commit": {
+          "message": "Full rebuild as Focus app — activity picker, countdown timer, ambient music, session history",
+          "author": {
+            "date": "2026-07-19T06:36:39Z"
+          }
+        }
+      },
+      {
+        "sha": "00d6071f67e3abc826064af13dc23b7e53a123d1",
+        "html_url": "https://github.com/freeappstore-online/my-todo-app-3/commit/00d6071f67e3abc826064af13dc23b7e53a123d1",
+        "commit": {
+          "message": "Rebuild as Focus app with activity picker, countdown timer, and ambient music",
+          "author": {
+            "date": "2026-07-19T06:23:57Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/habitquest-rpg": {
+    "meta": {
+      "created_at": "2026-08-09T06:13:43Z",
+      "pushed_at": "2026-08-09T06:49:28Z"
+    },
+    "commits": [
+      {
+        "sha": "0819639561105d18f371536489c73d81db56276e",
+        "html_url": "https://github.com/freeappstore-online/habitquest-rpg/commit/0819639561105d18f371536489c73d81db56276e",
+        "commit": {
+          "message": "Add pixel art SVG character sprite with class-based appearance, gear visual overlays, and animated stage",
+          "author": {
+            "date": "2026-08-09T06:49:28Z"
+          }
+        }
+      },
+      {
+        "sha": "b179082ee50ac32dd615b3b27905daf0bf75f340",
+        "html_url": "https://github.com/freeappstore-online/habitquest-rpg/commit/b179082ee50ac32dd615b3b27905daf0bf75f340",
+        "commit": {
+          "message": "Initial app — built with FreeAppStore AI agent",
+          "author": {
+            "date": "2026-08-09T06:13:55Z"
+          }
+        }
+      },
+      {
+        "sha": "ea69b5321e1c50066ab71010cfa3f35d98fc3fc4",
+        "html_url": "https://github.com/freeappstore-online/habitquest-rpg/commit/ea69b5321e1c50066ab71010cfa3f35d98fc3fc4",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-08-09T06:13:44Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/chefai-recipes": {
+    "meta": {
+      "created_at": "2026-08-09T06:41:57Z",
+      "pushed_at": "2026-08-09T07:04:09Z"
+    },
+    "commits": [
+      {
+        "sha": "e819ca401c68fde0c26ee02dc972f2601ef2a3ac",
+        "html_url": "https://github.com/freeappstore-online/chefai-recipes/commit/e819ca401c68fde0c26ee02dc972f2601ef2a3ac",
+        "commit": {
+          "message": "Complete rewrite - clean recipe app with dietary restrictions and step-by-step instructions",
+          "author": {
+            "date": "2026-08-09T07:04:08Z"
+          }
+        }
+      },
+      {
+        "sha": "de1356278864e78ce7c6b987cdae0a8a0b2054ed",
+        "html_url": "https://github.com/freeappstore-online/chefai-recipes/commit/de1356278864e78ce7c6b987cdae0a8a0b2054ed",
+        "commit": {
+          "message": "Simplify App.tsx and Shell.tsx to fix build errors",
+          "author": {
+            "date": "2026-08-09T07:01:18Z"
+          }
+        }
+      },
+      {
+        "sha": "e7c383e913588e79e393b5a62e3738054bbc9490",
+        "html_url": "https://github.com/freeappstore-online/chefai-recipes/commit/e7c383e913588e79e393b5a62e3738054bbc9490",
+        "commit": {
+          "message": "Fix TypeScript issues - clean rewrite of App.tsx and Shell.tsx",
+          "author": {
+            "date": "2026-08-09T06:46:25Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/asmr-boards": {
+    "meta": {
+      "created_at": "2026-08-09T05:01:56Z",
+      "pushed_at": "2026-08-09T05:02:10Z"
+    },
+    "commits": [
+      {
+        "sha": "b847997d301f4de847e59287b1e6745a597de6b4",
+        "html_url": "https://github.com/freeappstore-online/asmr-boards/commit/b847997d301f4de847e59287b1e6745a597de6b4",
+        "commit": {
+          "message": "Initial app — built with FreeAppStore AI agent",
+          "author": {
+            "date": "2026-08-09T05:02:10Z"
+          }
+        }
+      },
+      {
+        "sha": "53f6819f917fc3b99e95ad3f38c4a94c27fe5a08",
+        "html_url": "https://github.com/freeappstore-online/asmr-boards/commit/53f6819f917fc3b99e95ad3f38c4a94c27fe5a08",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-08-09T05:01:56Z"
+          }
+        }
+      }
+    ]
   }
 }
