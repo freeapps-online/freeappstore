@@ -1947,6 +1947,20 @@
       "type": "standalone",
       "developer": "FreeAppStore",
       "creatorGithub": "imhappyamber-design"
+    },
+    {
+      "id": "asmr-keyboard",
+      "name": "asmr-keyboard",
+      "category": "Lifestyle",
+      "icon": "🚀",
+      "iconBg": "#f3f4f6",
+      "description": "Relaxing 3D ASMR keyboard with 6 themed keyboards, satisfying synthesized click sounds, and immersive visuals.",
+      "appUrl": "https://asmr-keyboard.freeappstore.online",
+      "repo": "freeappstore-online/asmr-keyboard",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeAppStore",
+      "creatorGithub": "BUDDY-KIWI-BERRY"
     }
   ]
 }
