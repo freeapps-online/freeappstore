@@ -94,7 +94,7 @@
       var btn = e.target.closest('.filter-btn');
       if (!btn) return;
       var sort = btn.dataset.sort;
-      if (!sort || sort === activeSort) return;
+      if (!sort) return;
       applySort(sort);
     });
 
