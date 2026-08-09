@@ -1891,6 +1891,20 @@
       "type": "standalone",
       "developer": "FreeAppStore",
       "creatorGithub": "SASASKIA"
+    },
+    {
+      "id": "family-hub",
+      "name": "family-hub",
+      "category": "Lifestyle",
+      "icon": "🚀",
+      "iconBg": "#f3f4f6",
+      "description": "All-in-one family organizer with tasks, reminders, calendar, shopping list, contacts, and shared chores — all offline, all private.",
+      "appUrl": "https://family-hub.freeappstore.online",
+      "repo": "freeappstore-online/family-hub",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeAppStore",
+      "creatorGithub": "Crystal12341"
     }
   ]
 }
