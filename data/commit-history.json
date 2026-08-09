@@ -4554,9 +4554,19 @@
   "freeappstore-online/votepool": {
     "meta": {
       "created_at": "2026-08-09T02:53:32Z",
-      "pushed_at": "2026-08-09T03:39:23Z"
+      "pushed_at": "2026-08-09T05:18:22Z"
     },
     "commits": [
+      {
+        "sha": "31b2afc50822869c7bf418c30269ae01b03b807d",
+        "html_url": "https://github.com/freeappstore-online/votepool/commit/31b2afc50822869c7bf418c30269ae01b03b807d",
+        "commit": {
+          "message": "Better expired poll message with Create New Poll CTA; clean URL on not-found",
+          "author": {
+            "date": "2026-08-09T05:18:21Z"
+          }
+        }
+      },
       {
         "sha": "25a0a093b8ede1b9911eeefe0029a92e35c868dd",
         "html_url": "https://github.com/freeappstore-online/votepool/commit/25a0a093b8ede1b9911eeefe0029a92e35c868dd",
@@ -4574,16 +4584,6 @@
           "message": "Fix copy link button: add clipboard fallback and use input instead of span for URL",
           "author": {
             "date": "2026-08-09T03:32:28Z"
-          }
-        }
-      },
-      {
-        "sha": "9f1756ffcddcb3e21ab98a2880c8dc87f712940f",
-        "html_url": "https://github.com/freeappstore-online/votepool/commit/9f1756ffcddcb3e21ab98a2880c8dc87f712940f",
-        "commit": {
-          "message": "Fix poll link flow: load poll from URL after sign-in, show invite banner for guests",
-          "author": {
-            "date": "2026-08-09T03:20:25Z"
           }
         }
       }
@@ -4620,9 +4620,29 @@
   "freeappstore-online/room-bloom": {
     "meta": {
       "created_at": "2026-08-09T05:13:31Z",
-      "pushed_at": "2026-08-09T05:13:47Z"
+      "pushed_at": "2026-08-09T05:38:00Z"
     },
     "commits": [
+      {
+        "sha": "8ec3052747224eacb906fe812d18d1302f0ae9cf",
+        "html_url": "https://github.com/freeappstore-online/room-bloom/commit/8ec3052747224eacb906fe812d18d1302f0ae9cf",
+        "commit": {
+          "message": "Full RPG quest system: missions with objectives, difficulty levels, quest map with unlockable areas, completion screen with confetti, mystery boxes, XP levels, badges, inventory",
+          "author": {
+            "date": "2026-08-09T05:37:59Z"
+          }
+        }
+      },
+      {
+        "sha": "8a247b2dc81766de9ae97e45e5f480780ecf2b89",
+        "html_url": "https://github.com/freeappstore-online/room-bloom/commit/8a247b2dc81766de9ae97e45e5f480780ecf2b89",
+        "commit": {
+          "message": "Rebuild as Home Quest: user-created chore reminders with browser notifications, points, streaks, badges, and daily quest tracking",
+          "author": {
+            "date": "2026-08-09T05:26:22Z"
+          }
+        }
+      },
       {
         "sha": "2272292e0a065f389aa18eb823f02801527a16ce",
         "html_url": "https://github.com/freeappstore-online/room-bloom/commit/2272292e0a065f389aa18eb823f02801527a16ce",
@@ -4632,14 +4652,32 @@
             "date": "2026-08-09T05:13:46Z"
           }
         }
+      }
+    ]
+  },
+  "freeappstore-online/chore-list": {
+    "meta": {
+      "created_at": "2026-08-09T05:47:35Z",
+      "pushed_at": "2026-08-09T05:47:52Z"
+    },
+    "commits": [
+      {
+        "sha": "ca4f86ec771b2a9564d42deca4b8d164eaa96024",
+        "html_url": "https://github.com/freeappstore-online/chore-list/commit/ca4f86ec771b2a9564d42deca4b8d164eaa96024",
+        "commit": {
+          "message": "Initial app — built with FreeAppStore AI agent",
+          "author": {
+            "date": "2026-08-09T05:47:51Z"
+          }
+        }
       },
       {
-        "sha": "f80eca8e0a60ab19b2281e84868bb30df115e273",
-        "html_url": "https://github.com/freeappstore-online/room-bloom/commit/f80eca8e0a60ab19b2281e84868bb30df115e273",
+        "sha": "8e53c2879adc11f2331a66e8d93a4275ae1d0268",
+        "html_url": "https://github.com/freeappstore-online/chore-list/commit/8e53c2879adc11f2331a66e8d93a4275ae1d0268",
         "commit": {
           "message": "Initial commit",
           "author": {
-            "date": "2026-08-09T05:13:32Z"
+            "date": "2026-08-09T05:47:36Z"
           }
         }
       }
