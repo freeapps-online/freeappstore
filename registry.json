@@ -1863,6 +1863,20 @@
       "type": "standalone",
       "developer": "FreeAppStore",
       "creatorGithub": "BUDDY-KIWI-BERRY"
+    },
+    {
+      "id": "room-bloom",
+      "name": "room-bloom",
+      "category": "Lifestyle",
+      "icon": "🚀",
+      "iconBg": "#f3f4f6",
+      "description": "Design your dream bedroom, complete decorating challenges, earn coins, and unlock furniture & decorations.",
+      "appUrl": "https://room-bloom.freeappstore.online",
+      "repo": "freeappstore-online/room-bloom",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeAppStore",
+      "creatorGithub": "SASASKIA"
     }
   ]
 }
