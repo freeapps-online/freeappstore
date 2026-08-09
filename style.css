@@ -1253,6 +1253,61 @@ footer .container {
   fill: currentColor;
 }
 
+/* Vote button on compact cards */
+.app-card.compact .vote-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 100px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  flex-shrink: 0;
+  font-family: inherit;
+  line-height: 1;
+}
+
+.app-card.compact .vote-btn:hover {
+  border-color: #f43f5e;
+  color: #f43f5e;
+}
+
+.app-card.compact .vote-btn.voted,
+.app-card.compact .vote-btn[aria-pressed="true"] {
+  border-color: #f43f5e;
+  background: #fff1f2;
+  color: #f43f5e;
+}
+
+:root[data-theme="dark"] .app-card.compact .vote-btn.voted,
+:root[data-theme="dark"] .app-card.compact .vote-btn[aria-pressed="true"] {
+  background: #4c0519;
+  border-color: #f43f5e;
+  color: #fb7185;
+}
+
+:root[data-theme="dark"] .app-card.compact .vote-btn:hover {
+  color: #fb7185;
+  border-color: #fb7185;
+}
+
+.app-card.compact .vote-icon {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.app-card.compact .vote-btn.voted .vote-icon,
+.app-card.compact .vote-btn[aria-pressed="true"] .vote-icon {
+  fill: #f43f5e;
+  stroke: #f43f5e;
+}
+
 /* Quality badge tweaks for compact cards */
 .app-card.compact .quality-badge {
   font-size: 0.65rem;

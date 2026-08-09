@@ -1,7 +1,8 @@
 /**
  * FreeAppStore storefront interactions:
  *   - category filter bar
- *   - sort tabs (Featured / Top Rated / Most Active / Popular) — visual only
+ *   - sort tabs (Newest / Most popular)
+ *   - vote buttons (heart pill on each card)
  *   - split-pane preview with device mode (desktop / tablet / mobile)
  *   - ?app=<id> deep link
  *
@@ -58,14 +59,12 @@
       // Reflect in URL (same replaceState pattern as search.js).
       try {
         var u = new URL(window.location.href);
-        if (sort === 'newest') u.searchParams.set('sort', 'newest');
-        else u.searchParams.delete('sort');
+        u.searchParams.set('sort', sort);
         window.history.replaceState(null, '', u.toString());
       } catch (e) {}
 
-      // Reorder DOM nodes. Only sort by data-published (newest = largest ISO
-      // string first; ISO 8601 sorts lexicographically). Cards with no
-      // data-published value sort last (treated as epoch 0).
+      // Reorder DOM nodes by moving them in the grid (DOM order, not CSS order).
+      // Cards with missing data sort last for determinism.
       var cards = Array.from(grid.querySelectorAll('.app-card'));
       if (sort === 'newest') {
         cards.sort(function (a, b) {
@@ -79,8 +78,16 @@
           return pa < pb ? 1 : -1;
         });
         cards.forEach(function (card) { grid.appendChild(card); });
+      } else if (sort === 'popular') {
+        cards.sort(function (a, b) {
+          var va = parseInt(a.dataset.votes || '0', 10) || 0;
+          var vb = parseInt(b.dataset.votes || '0', 10) || 0;
+          if (va !== vb) return vb - va; // descending by votes
+          // Tie-break by data-id alphabetically for determinism.
+          return (a.getAttribute('data-id') || '').localeCompare(b.getAttribute('data-id') || '');
+        });
+        cards.forEach(function (card) { grid.appendChild(card); });
       }
-      // "newest" is currently the only sort option; additional options go here.
     }
 
     sortBar.addEventListener('click', function (e) {
@@ -101,6 +108,122 @@
     } catch (e) {
       applySort('newest');
     }
+  })();
+
+  // ---------- Vote counts (load on page open, populate data-votes + counts) ----------
+  (function () {
+    var API = 'https://api.freeappstore.online';
+
+    // Populate data-votes on all cards and update visible vote-count spans.
+    function applyVoteCounts(votes) {
+      Object.keys(votes).forEach(function (appId) {
+        var count = votes[appId] || 0;
+        var card = document.querySelector('.app-card[data-id="' + CSS.escape(appId) + '"]');
+        if (!card) return;
+        card.dataset.votes = String(count);
+        var span = card.querySelector('.vote-btn .vote-count');
+        if (span) span.textContent = count > 0 ? String(count) : '0';
+      });
+    }
+
+    // Fetch aggregate votes once on page load. Resilient — failures leave
+    // cards at count 0 and the sort still works (all tied at 0).
+    fetch(API + '/v1/store/votes')
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        if (data && data.votes && typeof data.votes === 'object') {
+          applyVoteCounts(data.votes);
+          // If the current sort is 'popular', re-apply so counts are reflected.
+          if (typeof window.__fasActiveSort === 'function' && window.__fasActiveSort() === 'popular') {
+            // Trigger a re-sort by simulating the sort button click sequence.
+            var sortBar = document.getElementById('sortBar');
+            if (sortBar) {
+              var btn = sortBar.querySelector('[data-sort="popular"]');
+              if (btn) btn.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+            }
+          }
+        }
+      })
+      .catch(function () { /* votes unavailable — cards stay at 0 */ });
+  })();
+
+  // ---------- Vote button click handler ----------
+  (function () {
+    var API = 'https://api.freeappstore.online';
+    // voted state is tracked in memory (per page load); a future improvement
+    // could use localStorage for cross-session persistence.
+    var votedSet = {};
+
+    function getToken() {
+      try {
+        var raw = localStorage.getItem('fas:session');
+        if (!raw) return null;
+        var parsed = JSON.parse(raw);
+        return (parsed && typeof parsed.token === 'string') ? parsed.token : null;
+      } catch (e) { return null; }
+    }
+
+    function triggerSignIn() {
+      // Same redirect flow as auth.js showSignIn().
+      var url = new URL('/v1/auth/github/start', API);
+      url.searchParams.set('app_id', 'store');
+      url.searchParams.set('return_to', window.location.href);
+      window.location.href = url.toString();
+    }
+
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('.vote-btn');
+      if (!btn) return;
+      // Prevent click from propagating to the card body (which opens the preview pane).
+      e.stopPropagation();
+
+      var appId = btn.dataset.appId;
+      if (!appId) return;
+
+      var token = getToken();
+      if (!token) {
+        triggerSignIn();
+        return;
+      }
+
+      var alreadyVoted = !!votedSet[appId];
+      var method = alreadyVoted ? 'DELETE' : 'POST';
+
+      // Optimistic update.
+      var countSpan = btn.querySelector('.vote-count');
+      var current = parseInt(btn.closest('.app-card').dataset.votes || '0', 10) || 0;
+      var optimistic = alreadyVoted ? Math.max(0, current - 1) : current + 1;
+      if (countSpan) countSpan.textContent = String(optimistic);
+      btn.closest('.app-card').dataset.votes = String(optimistic);
+      btn.setAttribute('aria-pressed', alreadyVoted ? 'false' : 'true');
+      btn.classList.toggle('voted', !alreadyVoted);
+
+      fetch(API + '/v1/store/apps/' + encodeURIComponent(appId) + '/vote', {
+        method: method,
+        headers: { Authorization: 'Bearer ' + token },
+      })
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+        .then(function (data) {
+          // Confirm with server count.
+          var confirmed = typeof data.count === 'number' ? data.count : optimistic;
+          if (countSpan) countSpan.textContent = String(confirmed);
+          btn.closest('.app-card').dataset.votes = String(confirmed);
+          if (data.voted) {
+            votedSet[appId] = true;
+          } else {
+            delete votedSet[appId];
+          }
+          btn.setAttribute('aria-pressed', data.voted ? 'true' : 'false');
+          btn.classList.toggle('voted', !!data.voted);
+        })
+        .catch(function () {
+          // Roll back optimistic update on error.
+          if (countSpan) countSpan.textContent = String(current);
+          btn.closest('.app-card').dataset.votes = String(current);
+          btn.setAttribute('aria-pressed', alreadyVoted ? 'true' : 'false');
+          btn.classList.toggle('voted', alreadyVoted);
+        });
+    });
   })();
 
   // ---------- Split-pane preview ----------
