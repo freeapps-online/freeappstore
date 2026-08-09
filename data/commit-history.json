@@ -4554,26 +4554,64 @@
   "freeappstore-online/votepool": {
     "meta": {
       "created_at": "2026-08-09T02:53:32Z",
-      "pushed_at": "2026-08-09T02:53:45Z"
+      "pushed_at": "2026-08-09T03:39:23Z"
     },
     "commits": [
       {
-        "sha": "5d65a6ded391798fea1c946d41f38f8f3f223245",
-        "html_url": "https://github.com/freeappstore-online/votepool/commit/5d65a6ded391798fea1c946d41f38f8f3f223245",
+        "sha": "25a0a093b8ede1b9911eeefe0029a92e35c868dd",
+        "html_url": "https://github.com/freeappstore-online/votepool/commit/25a0a093b8ede1b9911eeefe0029a92e35c868dd",
         "commit": {
-          "message": "Initial app — built with FreeAppStore AI agent",
+          "message": "Fix user identity: handle login/name/id fallbacks from auth; fix poll-not-found clears URL param",
           "author": {
-            "date": "2026-08-09T02:53:45Z"
+            "date": "2026-08-09T03:39:22Z"
           }
         }
       },
       {
-        "sha": "f73ff2fa0bc7a930ebe951f7b7317d6d5fd55a68",
-        "html_url": "https://github.com/freeappstore-online/votepool/commit/f73ff2fa0bc7a930ebe951f7b7317d6d5fd55a68",
+        "sha": "72367a93de60492a0043edde54179da25a63540f",
+        "html_url": "https://github.com/freeappstore-online/votepool/commit/72367a93de60492a0043edde54179da25a63540f",
+        "commit": {
+          "message": "Fix copy link button: add clipboard fallback and use input instead of span for URL",
+          "author": {
+            "date": "2026-08-09T03:32:28Z"
+          }
+        }
+      },
+      {
+        "sha": "9f1756ffcddcb3e21ab98a2880c8dc87f712940f",
+        "html_url": "https://github.com/freeappstore-online/votepool/commit/9f1756ffcddcb3e21ab98a2880c8dc87f712940f",
+        "commit": {
+          "message": "Fix poll link flow: load poll from URL after sign-in, show invite banner for guests",
+          "author": {
+            "date": "2026-08-09T03:20:25Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/asmr-boards": {
+    "meta": {
+      "created_at": "2026-08-09T05:01:56Z",
+      "pushed_at": "2026-08-09T05:02:10Z"
+    },
+    "commits": [
+      {
+        "sha": "b847997d301f4de847e59287b1e6745a597de6b4",
+        "html_url": "https://github.com/freeappstore-online/asmr-boards/commit/b847997d301f4de847e59287b1e6745a597de6b4",
+        "commit": {
+          "message": "Initial app — built with FreeAppStore AI agent",
+          "author": {
+            "date": "2026-08-09T05:02:10Z"
+          }
+        }
+      },
+      {
+        "sha": "53f6819f917fc3b99e95ad3f38c4a94c27fe5a08",
+        "html_url": "https://github.com/freeappstore-online/asmr-boards/commit/53f6819f917fc3b99e95ad3f38c4a94c27fe5a08",
         "commit": {
           "message": "Initial commit",
           "author": {
-            "date": "2026-08-09T02:53:32Z"
+            "date": "2026-08-09T05:01:56Z"
           }
         }
       }
