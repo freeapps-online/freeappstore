@@ -4682,5 +4682,33 @@
         }
       }
     ]
+  },
+  "freeappstore-online/family-hub": {
+    "meta": {
+      "created_at": "2026-08-09T05:51:40Z",
+      "pushed_at": "2026-08-09T05:51:57Z"
+    },
+    "commits": [
+      {
+        "sha": "9f61105692995557f935ee66e139badf53c83eed",
+        "html_url": "https://github.com/freeappstore-online/family-hub/commit/9f61105692995557f935ee66e139badf53c83eed",
+        "commit": {
+          "message": "Initial app — built with FreeAppStore AI agent",
+          "author": {
+            "date": "2026-08-09T05:51:57Z"
+          }
+        }
+      },
+      {
+        "sha": "f195802df44a51a3955f8efc45239c8c796abe75",
+        "html_url": "https://github.com/freeappstore-online/family-hub/commit/f195802df44a51a3955f8efc45239c8c796abe75",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-08-09T05:51:41Z"
+          }
+        }
+      }
+    ]
   }
 }
