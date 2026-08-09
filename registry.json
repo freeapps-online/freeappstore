@@ -1905,6 +1905,20 @@
       "type": "standalone",
       "developer": "FreeAppStore",
       "creatorGithub": "Crystal12341"
+    },
+    {
+      "id": "bill-reminders",
+      "name": "bill-reminders",
+      "category": "Finance",
+      "icon": "🚀",
+      "iconBg": "#f3f4f6",
+      "description": "Track and manage your recurring bills with due-date reminders, overdue alerts, and payment history.",
+      "appUrl": "https://bill-reminders.freeappstore.online",
+      "repo": "freeappstore-online/bill-reminders",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeAppStore",
+      "creatorGithub": "SASASKIA"
     }
   ]
 }
