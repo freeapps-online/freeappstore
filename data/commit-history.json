@@ -4724,9 +4724,19 @@
   "freeappstore-online/bill-reminders": {
     "meta": {
       "created_at": "2026-08-09T05:52:28Z",
-      "pushed_at": "2026-08-09T06:11:25Z"
+      "pushed_at": "2026-08-09T06:15:50Z"
     },
     "commits": [
+      {
+        "sha": "a63285d55aeef37e6c6b7fcf21bf0ea07a9f67b1",
+        "html_url": "https://github.com/freeappstore-online/bill-reminders/commit/a63285d55aeef37e6c6b7fcf21bf0ea07a9f67b1",
+        "commit": {
+          "message": "Switch currency from USD to AUD (Australian dollars)",
+          "author": {
+            "date": "2026-08-09T06:15:49Z"
+          }
+        }
+      },
       {
         "sha": "a2fbe95dfc9307e0101585b083208c7c1682db4d",
         "html_url": "https://github.com/freeappstore-online/bill-reminders/commit/a2fbe95dfc9307e0101585b083208c7c1682db4d",
@@ -4746,52 +4756,42 @@
             "date": "2026-08-09T06:01:57Z"
           }
         }
-      },
-      {
-        "sha": "6606cff60c2c04e8ab6add7da05d5753a799849d",
-        "html_url": "https://github.com/freeappstore-online/bill-reminders/commit/6606cff60c2c04e8ab6add7da05d5753a799849d",
-        "commit": {
-          "message": "Initial app — built with FreeAppStore AI agent",
-          "author": {
-            "date": "2026-08-09T05:52:43Z"
-          }
-        }
       }
     ]
   },
   "freeappstore-online/bag-buddy": {
     "meta": {
       "created_at": "2026-08-09T05:54:00Z",
-      "pushed_at": "2026-08-09T06:11:26Z"
+      "pushed_at": "2026-08-09T06:39:18Z"
     },
     "commits": [
       {
-        "sha": "a38832306a7b333ffb3f4e8e9bca42ca2a8bc278",
-        "html_url": "https://github.com/freeappstore-online/bag-buddy/commit/a38832306a7b333ffb3f4e8e9bca42ca2a8bc278",
+        "sha": "c3a4a594b101f069f46f9dc2af3c739a9b30dc8a",
+        "html_url": "https://github.com/freeappstore-online/bag-buddy/commit/c3a4a594b101f069f46f9dc2af3c739a9b30dc8a",
         "commit": {
-          "message": "Add Settings page with school name, student name, weekly timetable, and subject-based item suggestions",
+          "message": "Add reward system with stars, parent-editable rewards, child read-only view, history log",
           "author": {
-            "date": "2026-08-09T06:11:25Z"
+            "date": "2026-08-09T06:39:18Z"
           }
         }
       },
       {
-        "sha": "923d13ae85a248d0c27b750da36678d48337b4d1",
-        "html_url": "https://github.com/freeappstore-online/bag-buddy/commit/923d13ae85a248d0c27b750da36678d48337b4d1",
+        "sha": "f2997249b134154b94509f60d051aa6014c1f0b0",
+        "html_url": "https://github.com/freeappstore-online/bag-buddy/commit/f2997249b134154b94509f60d051aa6014c1f0b0",
         "commit": {
-          "message": "Initial app — built with FreeAppStore AI agent",
+          "message": "Add welcome screen with child/parent role selection, role-based navigation and switch role banner",
           "author": {
-            "date": "2026-08-09T05:54:17Z"
+            "date": "2026-08-09T06:34:00Z"
           }
         }
       },
       {
-        "sha": "acfca4bd5ed057cf8148c2c832e9bdaaa9a89722",
-        "html_url": "https://github.com/freeappstore-online/bag-buddy/commit/acfca4bd5ed057cf8148c2c832e9bdaaa9a89722",
+        "sha": "10352b5e95e109c8211646f0f812dc314adf94ce",
+        "html_url": "https://github.com/freeappstore-online/bag-buddy/commit/10352b5e95e109c8211646f0f812dc314adf94ce",
         "commit": {
-          "message": "Initial commit",
+          "message": "Add Parent View with packing progress, missing items, timetable summary and reset button",
           "author": {
-            "date": "2026-08-09T05:54:01Z"
+            "date": "2026-08-09T06:26:51Z"
           }
         }
       }
@@ -4820,6 +4820,34 @@
           "message": "Initial commit",
           "author": {
             "date": "2026-08-09T06:13:44Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/asmr-keyboard": {
+    "meta": {
+      "created_at": "2026-08-09T06:41:27Z",
+      "pushed_at": "2026-08-09T06:41:42Z"
+    },
+    "commits": [
+      {
+        "sha": "016d3f344377f57399d210eb31dcf34c88b47be4",
+        "html_url": "https://github.com/freeappstore-online/asmr-keyboard/commit/016d3f344377f57399d210eb31dcf34c88b47be4",
+        "commit": {
+          "message": "Initial app — built with FreeAppStore AI agent",
+          "author": {
+            "date": "2026-08-09T06:41:41Z"
+          }
+        }
+      },
+      {
+        "sha": "679c03322ec5a0addaf6e6976504ea1f310e0477",
+        "html_url": "https://github.com/freeappstore-online/asmr-keyboard/commit/679c03322ec5a0addaf6e6976504ea1f310e0477",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-08-09T06:41:27Z"
           }
         }
       }
