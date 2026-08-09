@@ -4554,9 +4554,19 @@
   "freeappstore-online/votepool": {
     "meta": {
       "created_at": "2026-08-09T02:53:32Z",
-      "pushed_at": "2026-08-09T05:18:22Z"
+      "pushed_at": "2026-08-09T06:03:16Z"
     },
     "commits": [
+      {
+        "sha": "a80882b76d6629d4b11752dc8e8e8c4a0f86da00",
+        "html_url": "https://github.com/freeappstore-online/votepool/commit/a80882b76d6629d4b11752dc8e8e8c4a0f86da00",
+        "commit": {
+          "message": "Fix: capture poll ID once on mount, never show error without a poll link, clean up init logic",
+          "author": {
+            "date": "2026-08-09T06:03:16Z"
+          }
+        }
+      },
       {
         "sha": "31b2afc50822869c7bf418c30269ae01b03b807d",
         "html_url": "https://github.com/freeappstore-online/votepool/commit/31b2afc50822869c7bf418c30269ae01b03b807d",
@@ -4574,16 +4584,6 @@
           "message": "Fix user identity: handle login/name/id fallbacks from auth; fix poll-not-found clears URL param",
           "author": {
             "date": "2026-08-09T03:39:22Z"
-          }
-        }
-      },
-      {
-        "sha": "72367a93de60492a0043edde54179da25a63540f",
-        "html_url": "https://github.com/freeappstore-online/votepool/commit/72367a93de60492a0043edde54179da25a63540f",
-        "commit": {
-          "message": "Fix copy link button: add clipboard fallback and use input instead of span for URL",
-          "author": {
-            "date": "2026-08-09T03:32:28Z"
           }
         }
       }
@@ -4686,9 +4686,19 @@
   "freeappstore-online/family-hub": {
     "meta": {
       "created_at": "2026-08-09T05:51:40Z",
-      "pushed_at": "2026-08-09T05:51:57Z"
+      "pushed_at": "2026-08-09T06:12:36Z"
     },
     "commits": [
+      {
+        "sha": "f0ef828bf9eac3cf80fa3f6c00cf85d42fd9114e",
+        "html_url": "https://github.com/freeappstore-online/family-hub/commit/f0ef828bf9eac3cf80fa3f6c00cf85d42fd9114e",
+        "commit": {
+          "message": "Update emergency numbers to Australian: 000, 131 444 (Police), 13 11 26 (Poison Control)",
+          "author": {
+            "date": "2026-08-09T06:12:36Z"
+          }
+        }
+      },
       {
         "sha": "9f61105692995557f935ee66e139badf53c83eed",
         "html_url": "https://github.com/freeappstore-online/family-hub/commit/9f61105692995557f935ee66e139badf53c83eed",
@@ -4714,9 +4724,29 @@
   "freeappstore-online/bill-reminders": {
     "meta": {
       "created_at": "2026-08-09T05:52:28Z",
-      "pushed_at": "2026-08-09T05:52:44Z"
+      "pushed_at": "2026-08-09T06:11:25Z"
     },
     "commits": [
+      {
+        "sha": "a2fbe95dfc9307e0101585b083208c7c1682db4d",
+        "html_url": "https://github.com/freeappstore-online/bill-reminders/commit/a2fbe95dfc9307e0101585b083208c7c1682db4d",
+        "commit": {
+          "message": "Remove demo bills - start empty, only show user-added bills. Add quick-add presets on empty home screen.",
+          "author": {
+            "date": "2026-08-09T06:11:24Z"
+          }
+        }
+      },
+      {
+        "sha": "111ce86aee396212b20fb3e3b2ad8ea05134601e",
+        "html_url": "https://github.com/freeappstore-online/bill-reminders/commit/111ce86aee396212b20fb3e3b2ad8ea05134601e",
+        "commit": {
+          "message": "Add home page with dashboard, spending breakdown, urgent bills, and nav",
+          "author": {
+            "date": "2026-08-09T06:01:57Z"
+          }
+        }
+      },
       {
         "sha": "6606cff60c2c04e8ab6add7da05d5753a799849d",
         "html_url": "https://github.com/freeappstore-online/bill-reminders/commit/6606cff60c2c04e8ab6add7da05d5753a799849d",
@@ -4726,25 +4756,25 @@
             "date": "2026-08-09T05:52:43Z"
           }
         }
-      },
-      {
-        "sha": "f2cfd64002016cb20b945b14834455ea1791d029",
-        "html_url": "https://github.com/freeappstore-online/bill-reminders/commit/f2cfd64002016cb20b945b14834455ea1791d029",
-        "commit": {
-          "message": "Initial commit",
-          "author": {
-            "date": "2026-08-09T05:52:29Z"
-          }
-        }
       }
     ]
   },
   "freeappstore-online/bag-buddy": {
     "meta": {
       "created_at": "2026-08-09T05:54:00Z",
-      "pushed_at": "2026-08-09T05:54:18Z"
+      "pushed_at": "2026-08-09T06:11:26Z"
     },
     "commits": [
+      {
+        "sha": "a38832306a7b333ffb3f4e8e9bca42ca2a8bc278",
+        "html_url": "https://github.com/freeappstore-online/bag-buddy/commit/a38832306a7b333ffb3f4e8e9bca42ca2a8bc278",
+        "commit": {
+          "message": "Add Settings page with school name, student name, weekly timetable, and subject-based item suggestions",
+          "author": {
+            "date": "2026-08-09T06:11:25Z"
+          }
+        }
+      },
       {
         "sha": "923d13ae85a248d0c27b750da36678d48337b4d1",
         "html_url": "https://github.com/freeappstore-online/bag-buddy/commit/923d13ae85a248d0c27b750da36678d48337b4d1",
@@ -4762,6 +4792,34 @@
           "message": "Initial commit",
           "author": {
             "date": "2026-08-09T05:54:01Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/habitquest-rpg": {
+    "meta": {
+      "created_at": "2026-08-09T06:13:43Z",
+      "pushed_at": "2026-08-09T06:13:55Z"
+    },
+    "commits": [
+      {
+        "sha": "b179082ee50ac32dd615b3b27905daf0bf75f340",
+        "html_url": "https://github.com/freeappstore-online/habitquest-rpg/commit/b179082ee50ac32dd615b3b27905daf0bf75f340",
+        "commit": {
+          "message": "Initial app — built with FreeAppStore AI agent",
+          "author": {
+            "date": "2026-08-09T06:13:55Z"
+          }
+        }
+      },
+      {
+        "sha": "ea69b5321e1c50066ab71010cfa3f35d98fc3fc4",
+        "html_url": "https://github.com/freeappstore-online/habitquest-rpg/commit/ea69b5321e1c50066ab71010cfa3f35d98fc3fc4",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-08-09T06:13:44Z"
           }
         }
       }
