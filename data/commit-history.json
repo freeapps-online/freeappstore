@@ -4554,9 +4554,19 @@
   "freeappstore-online/votepool": {
     "meta": {
       "created_at": "2026-08-09T02:53:32Z",
-      "pushed_at": "2026-08-09T06:03:16Z"
+      "pushed_at": "2026-08-09T06:49:54Z"
     },
     "commits": [
+      {
+        "sha": "e0cce6676132e48476750ef3a5df4103df3123fe",
+        "html_url": "https://github.com/freeappstore-online/votepool/commit/e0cce6676132e48476750ef3a5df4103df3123fe",
+        "commit": {
+          "message": "Rewrite: encode full poll in share URL (base64), localStorage only - no KV/auth needed, always works",
+          "author": {
+            "date": "2026-08-09T06:49:53Z"
+          }
+        }
+      },
       {
         "sha": "a80882b76d6629d4b11752dc8e8e8c4a0f86da00",
         "html_url": "https://github.com/freeappstore-online/votepool/commit/a80882b76d6629d4b11752dc8e8e8c4a0f86da00",
@@ -4574,16 +4584,6 @@
           "message": "Better expired poll message with Create New Poll CTA; clean URL on not-found",
           "author": {
             "date": "2026-08-09T05:18:21Z"
-          }
-        }
-      },
-      {
-        "sha": "25a0a093b8ede1b9911eeefe0029a92e35c868dd",
-        "html_url": "https://github.com/freeappstore-online/votepool/commit/25a0a093b8ede1b9911eeefe0029a92e35c868dd",
-        "commit": {
-          "message": "Fix user identity: handle login/name/id fallbacks from auth; fix poll-not-found clears URL param",
-          "author": {
-            "date": "2026-08-09T03:39:22Z"
           }
         }
       }
@@ -4800,9 +4800,19 @@
   "freeappstore-online/habitquest-rpg": {
     "meta": {
       "created_at": "2026-08-09T06:13:43Z",
-      "pushed_at": "2026-08-09T06:13:55Z"
+      "pushed_at": "2026-08-09T06:49:28Z"
     },
     "commits": [
+      {
+        "sha": "0819639561105d18f371536489c73d81db56276e",
+        "html_url": "https://github.com/freeappstore-online/habitquest-rpg/commit/0819639561105d18f371536489c73d81db56276e",
+        "commit": {
+          "message": "Add pixel art SVG character sprite with class-based appearance, gear visual overlays, and animated stage",
+          "author": {
+            "date": "2026-08-09T06:49:28Z"
+          }
+        }
+      },
       {
         "sha": "b179082ee50ac32dd615b3b27905daf0bf75f340",
         "html_url": "https://github.com/freeappstore-online/habitquest-rpg/commit/b179082ee50ac32dd615b3b27905daf0bf75f340",
@@ -4828,9 +4838,29 @@
   "freeappstore-online/asmr-keyboard": {
     "meta": {
       "created_at": "2026-08-09T06:41:27Z",
-      "pushed_at": "2026-08-09T06:41:42Z"
+      "pushed_at": "2026-08-09T06:54:52Z"
     },
     "commits": [
+      {
+        "sha": "2b27db6f8a59be02fd9a4ad90885ea201ca160fd",
+        "html_url": "https://github.com/freeappstore-online/asmr-keyboard/commit/2b27db6f8a59be02fd9a4ad90885ea201ca160fd",
+        "commit": {
+          "message": "Pre-fill honey goo on load + add theme charms (clouds, candy, snowflakes, orbs)",
+          "author": {
+            "date": "2026-08-09T06:54:51Z"
+          }
+        }
+      },
+      {
+        "sha": "0a02ff09813dec564cf2ebf46826e96d2207a64e",
+        "html_url": "https://github.com/freeappstore-online/asmr-keyboard/commit/0a02ff09813dec564cf2ebf46826e96d2207a64e",
+        "commit": {
+          "message": "Add honey goo drip animation overlay + mechanical clicker sound for honey theme",
+          "author": {
+            "date": "2026-08-09T06:48:04Z"
+          }
+        }
+      },
       {
         "sha": "016d3f344377f57399d210eb31dcf34c88b47be4",
         "html_url": "https://github.com/freeappstore-online/asmr-keyboard/commit/016d3f344377f57399d210eb31dcf34c88b47be4",
@@ -4840,42 +4870,42 @@
             "date": "2026-08-09T06:41:41Z"
           }
         }
-      },
-      {
-        "sha": "679c03322ec5a0addaf6e6976504ea1f310e0477",
-        "html_url": "https://github.com/freeappstore-online/asmr-keyboard/commit/679c03322ec5a0addaf6e6976504ea1f310e0477",
-        "commit": {
-          "message": "Initial commit",
-          "author": {
-            "date": "2026-08-09T06:41:27Z"
-          }
-        }
       }
     ]
   },
   "freeappstore-online/chefai-recipes": {
     "meta": {
       "created_at": "2026-08-09T06:41:57Z",
-      "pushed_at": "2026-08-09T06:42:15Z"
+      "pushed_at": "2026-08-09T07:04:09Z"
     },
     "commits": [
       {
-        "sha": "1a22e6a436d0e44185868894bc47edb20bd6602b",
-        "html_url": "https://github.com/freeappstore-online/chefai-recipes/commit/1a22e6a436d0e44185868894bc47edb20bd6602b",
+        "sha": "e819ca401c68fde0c26ee02dc972f2601ef2a3ac",
+        "html_url": "https://github.com/freeappstore-online/chefai-recipes/commit/e819ca401c68fde0c26ee02dc972f2601ef2a3ac",
         "commit": {
-          "message": "Initial app — built with FreeAppStore AI agent",
+          "message": "Complete rewrite - clean recipe app with dietary restrictions and step-by-step instructions",
           "author": {
-            "date": "2026-08-09T06:42:14Z"
+            "date": "2026-08-09T07:04:08Z"
           }
         }
       },
       {
-        "sha": "54478faa7c9f27840ab5063331fa8eed2a1950a4",
-        "html_url": "https://github.com/freeappstore-online/chefai-recipes/commit/54478faa7c9f27840ab5063331fa8eed2a1950a4",
+        "sha": "de1356278864e78ce7c6b987cdae0a8a0b2054ed",
+        "html_url": "https://github.com/freeappstore-online/chefai-recipes/commit/de1356278864e78ce7c6b987cdae0a8a0b2054ed",
         "commit": {
-          "message": "Initial commit",
+          "message": "Simplify App.tsx and Shell.tsx to fix build errors",
           "author": {
-            "date": "2026-08-09T06:41:58Z"
+            "date": "2026-08-09T07:01:18Z"
+          }
+        }
+      },
+      {
+        "sha": "e7c383e913588e79e393b5a62e3738054bbc9490",
+        "html_url": "https://github.com/freeappstore-online/chefai-recipes/commit/e7c383e913588e79e393b5a62e3738054bbc9490",
+        "commit": {
+          "message": "Fix TypeScript issues - clean rewrite of App.tsx and Shell.tsx",
+          "author": {
+            "date": "2026-08-09T06:46:25Z"
           }
         }
       }
