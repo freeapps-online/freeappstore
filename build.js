@@ -301,7 +301,7 @@ function escapeAttrCss(s) {
   return String(s).replace(/[^a-z0-9_-]/gi, '_');
 }
 
-function renderAppCard(app) {
+function renderAppCard(app, published) {
   const q = qualityScores[app.id];
   const qualityBadge = q && q.grade
     ? `<a href="/quality/${escapeHtml(app.id)}/" class="quality-badge grade-${q.grade.toLowerCase()}" title="Code quality: ${q.score}/100">${q.grade}</a>`
@@ -310,8 +310,9 @@ function renderAppCard(app) {
   // img.error listener and reads it. No more JS-string-in-HTML-attribute splicing.
   const letter = escapeHtml((app.name || '?').trim().charAt(0).toUpperCase());
   const authAttr = app.requiresAuth ? ' data-requires-auth="1"' : '';
+  const publishedAttr = published ? ` data-published="${escapeHtml(published)}"` : '';
   const iconEmoji = app.icon || `&#${(app.name || '?').codePointAt(0)};`;
-  return `        <div class="app-card compact" data-id="${escapeHtml(app.id)}" data-category="${escapeHtml(app.category)}" data-about="/apps/${escapeHtml(app.id)}"${authAttr}>
+  return `        <div class="app-card compact" data-id="${escapeHtml(app.id)}" data-category="${escapeHtml(app.category)}" data-about="/apps/${escapeHtml(app.id)}"${authAttr}${publishedAttr}>
           <div class="app-icon" data-letter="${letter}">
             <span class="app-emoji" aria-hidden="true">${iconEmoji}</span>
           </div>
@@ -342,7 +343,8 @@ const renderAuthorChip = (app) => {
   return escapeHtml(app.developer || 'FreeAppStore');
 };
 
-const appCards = apps.map(renderAppCard).join('\n\n');
+// appCards is generated inside the async IIFE below so it can use
+// histories[i].meta.created_at to stamp data-published on each card.
 
 // indexHtml is finalized inside the async IIFE below — cross-store
 // registry fetch is async, and we want to embed it into the page.
@@ -387,10 +389,11 @@ const categoryFilters = categories
   .map(([key, label]) => `<button class="filter-btn" type="button" data-category="${escapeHtml(key)}">${escapeHtml(label)}</button>`)
   .join('\n        ');
 
+// {{APPS_GRID}} is replaced inside the async IIFE after histories are fetched
+// so each card can carry data-published from histories[i].meta.created_at.
 let indexHtml = indexTemplate
   .replace('__CF_BEACON__', CF_BEACON_SNIPPET)
   .replace('{{INLINE_SCRIPT_HASH}}', inlineScriptHash)
-  .replace('{{APPS_GRID}}', appCards)
   .replace('{{APPS_COUNT}}', String(apps.length))
   .replace('{{CATEGORY_FILTERS}}', categoryFilters);
 
@@ -618,12 +621,23 @@ const [histories, auditMap, crossRegistry, manifests, buildInfos] = await Promis
   Promise.all(apps.map((a) => fetchBuildInfo(a.appUrl))),
 ]);
 
+// Stamp each card with data-published from the fetched history, then inject
+// the grid into the index HTML. This is done here (inside the async IIFE) so
+// histories are available; the {{APPS_GRID}} placeholder was intentionally
+// left unreplaced in the synchronous setup above.
+const appCards = apps.map((app, i) => {
+  const published = histories[i]?.meta?.created_at ?? null;
+  return renderAppCard(app, published);
+}).join('\n\n');
+
 // Now finalize and write the index page with the embedded cross-store
 // registry so the search bar can federate.
-indexHtml = indexHtml.replace(
-  '{{CROSS_STORE_REGISTRY}}',
-  JSON.stringify(crossRegistry).replace(/</g, '\\u003c'),
-);
+indexHtml = indexHtml
+  .replace('{{APPS_GRID}}', appCards)
+  .replace(
+    '{{CROSS_STORE_REGISTRY}}',
+    JSON.stringify(crossRegistry).replace(/</g, '\\u003c'),
+  );
 fs.writeFileSync(path.join(DIST, 'index.html'), indexHtml);
 
 // --- Settings page ---

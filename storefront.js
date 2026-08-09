@@ -38,6 +38,71 @@
     window.__fasActiveCategory = function () { return activeCategory; };
   })();
 
+  // ---------- Sort ----------
+  (function () {
+    var sortBar = document.getElementById('sortBar');
+    if (!sortBar) return;
+    var grid = document.getElementById('apps-grid');
+    if (!grid) return;
+
+    var activeSort = 'newest';
+
+    function applySort(sort) {
+      activeSort = sort;
+
+      // Update active pill.
+      sortBar.querySelectorAll('.filter-btn').forEach(function (b) {
+        b.classList.toggle('active', b.dataset.sort === sort);
+      });
+
+      // Reflect in URL (same replaceState pattern as search.js).
+      try {
+        var u = new URL(window.location.href);
+        if (sort === 'newest') u.searchParams.set('sort', 'newest');
+        else u.searchParams.delete('sort');
+        window.history.replaceState(null, '', u.toString());
+      } catch (e) {}
+
+      // Reorder DOM nodes. Only sort by data-published (newest = largest ISO
+      // string first; ISO 8601 sorts lexicographically). Cards with no
+      // data-published value sort last (treated as epoch 0).
+      var cards = Array.from(grid.querySelectorAll('.app-card'));
+      if (sort === 'newest') {
+        cards.sort(function (a, b) {
+          var pa = a.getAttribute('data-published') || '';
+          var pb = b.getAttribute('data-published') || '';
+          if (pa === pb) {
+            // Tie-break by data-id alphabetically for determinism.
+            return (a.getAttribute('data-id') || '').localeCompare(b.getAttribute('data-id') || '');
+          }
+          // Descending: larger ISO string first (more recent).
+          return pa < pb ? 1 : -1;
+        });
+        cards.forEach(function (card) { grid.appendChild(card); });
+      }
+      // "newest" is currently the only sort option; additional options go here.
+    }
+
+    sortBar.addEventListener('click', function (e) {
+      var btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      var sort = btn.dataset.sort;
+      if (!sort || sort === activeSort) return;
+      applySort(sort);
+    });
+
+    // Expose so category filter and search can re-trigger sort after reordering.
+    window.__fasActiveSort = function () { return activeSort; };
+
+    // Apply sort on load — honour ?sort= URL param, default to newest.
+    try {
+      var initialSort = new URL(window.location.href).searchParams.get('sort') || 'newest';
+      applySort(initialSort);
+    } catch (e) {
+      applySort('newest');
+    }
+  })();
+
   // ---------- Split-pane preview ----------
   (function () {
     var pane = document.getElementById('previewPane');
