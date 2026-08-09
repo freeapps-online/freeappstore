@@ -415,8 +415,10 @@ test("every local <script src> has a valid SRI integrity attribute", () => {
   const { tmp, tmpDist } = runBuild();
   try {
     const indexHtml = readFileSync(join(tmpDist, "index.html"), "utf8");
-    // Find each local <script src="/...js"> and confirm it has integrity="sha256-...".
-    const localScripts = indexHtml.match(/<script\s+src="\/[^"]+\.js"[^>]*>/g) || [];
+    // Find each local <script src="/...js"> (with optional ?v=<hash>) and confirm
+    // it has integrity="sha256-...". The ?v= query param is added by build.js for
+    // content-addressed cache-busting; the regex must accept it.
+    const localScripts = indexHtml.match(/<script\s+src="\/[^"]+\.js[^"]*"[^>]*>/g) || [];
     assert.ok(localScripts.length >= 2, `expected at least 2 local script tags, found ${localScripts.length}`);
     for (const tag of localScripts) {
       assert.match(tag, /integrity="sha256-[A-Za-z0-9+/=]+"/, `<script> missing integrity: ${tag}`);

@@ -370,6 +370,15 @@ function sriHash(filename) {
   const content = fs.readFileSync(path.join(ROOT, filename));
   return 'sha256-' + crypto.createHash('sha256').update(content).digest('base64');
 }
+// Short content-version token (first 10 hex chars of the SHA-256). Used as
+// a URL query param (?v=<token>) so every deploy that changes a file gets a
+// new URL. The edge can then cache the asset immutably — the URL changes
+// whenever the content changes, so a stale-cached copy is never served for
+// a URL that the fresh HTML references.
+function contentVersion(filename) {
+  const content = fs.readFileSync(path.join(ROOT, filename));
+  return crypto.createHash('sha256').update(content).digest('hex').slice(0, 10);
+}
 const sriHashes = {
   SEARCH_JS: sriHash('search.js'),
   STOREFRONT_JS: sriHash('storefront.js'),
@@ -381,6 +390,19 @@ const sriHashes = {
   PRISM_JS: sriHash('prism.js'),
   PRISM_AUTODETECT_JS: sriHash('prism-autodetect.js'),
   SETTINGS_JS: sriHash('settings.js'),
+};
+// Content-version tokens for the same set of assets (same read, different encoding).
+const contentVersions = {
+  SEARCH_JS: contentVersion('search.js'),
+  STOREFRONT_JS: contentVersion('storefront.js'),
+  AUTH_JS: contentVersion('auth.js'),
+  DETAIL_PAGE_JS: contentVersion('detail-page.js'),
+  GET_STARTED_JS: contentVersion('get-started.js'),
+  QUALITY_JS: contentVersion('quality.js'),
+  ANALYTICS_JS: contentVersion('analytics.js'),
+  PRISM_JS: contentVersion('prism.js'),
+  PRISM_AUTODETECT_JS: contentVersion('prism-autodetect.js'),
+  SETTINGS_JS: contentVersion('settings.js'),
 };
 
 const categoryMap = new Map();
@@ -401,9 +423,14 @@ let indexHtml = indexTemplate
   .replace('{{APPS_COUNT}}', String(apps.length))
   .replace('{{CATEGORY_FILTERS}}', categoryFilters);
 
-// Apply SRI hashes (placeholders look like {{SRI_AUTH_JS}}, {{SRI_SEARCH_JS}}, etc.)
+// Apply SRI hashes and content-version tokens.
+// SRI placeholders: {{SRI_AUTH_JS}} → integrity value
+// Version placeholders: {{VER_AUTH_JS}} → short hex token used in src="...?v=<token>"
 for (const [k, v] of Object.entries(sriHashes)) {
   indexHtml = indexHtml.replaceAll(`{{SRI_${k}}}`, v);
+}
+for (const [k, v] of Object.entries(contentVersions)) {
+  indexHtml = indexHtml.replaceAll(`{{VER_${k}}}`, v);
 }
 
 // --- Generate app detail pages ---
@@ -650,6 +677,9 @@ let settingsHtml = settingsTemplate.replace('__CF_BEACON__', CF_BEACON_SNIPPET);
 for (const [k, v] of Object.entries(sriHashes)) {
   settingsHtml = settingsHtml.replaceAll(`{{SRI_${k}}}`, v);
 }
+for (const [k, v] of Object.entries(contentVersions)) {
+  settingsHtml = settingsHtml.replaceAll(`{{VER_${k}}}`, v);
+}
 fs.writeFileSync(path.join(DIST, 'settings.html'), settingsHtml);
 
 // Per-card icon backgrounds (registry-driven). Lives in its own file so
@@ -690,6 +720,9 @@ let qualityHtml = qualityTemplate
   .replace('{{REGISTRIES_JSON}}', JSON.stringify(qualityRegistry).replace(/</g, '\\u003c'));
 for (const [k, v] of Object.entries(sriHashes)) {
   qualityHtml = qualityHtml.replaceAll(`{{SRI_${k}}}`, v);
+}
+for (const [k, v] of Object.entries(contentVersions)) {
+  qualityHtml = qualityHtml.replaceAll(`{{VER_${k}}}`, v);
 }
 fs.writeFileSync(path.join(DIST, 'quality.html'), qualityHtml);
 console.log(`  /quality dashboard generated for ${qualityRegistry.apps.length} apps + ${qualityRegistry.games.length} games`);
@@ -737,9 +770,12 @@ apps.forEach((app, i) => {
     .replace(/\{\{VIEWPORT_BADGE\}\}/g, renderViewportBadge(manifests[i]))
     .replace(/\{\{SIZE\}\}/g, formatSize(buildInfos[i]?.size) || 'Unknown');
 
-  // SRI hashes (detail pages use auth.js + detail-page.js).
+  // SRI hashes and content-version tokens (detail pages use auth.js + detail-page.js).
   for (const [k, v] of Object.entries(sriHashes)) {
     html = html.replaceAll(`{{SRI_${k}}}`, v);
+  }
+  for (const [k, v] of Object.entries(contentVersions)) {
+    html = html.replaceAll(`{{VER_${k}}}`, v);
   }
 
   fs.writeFileSync(path.join(DIST, 'apps', `${app.id}.html`), html);
@@ -833,6 +869,9 @@ uniqueAuthors.forEach(username => {
   for (const [k, v] of Object.entries(sriHashes)) {
     html = html.replaceAll(`{{SRI_${k}}}`, v);
   }
+  for (const [k, v] of Object.entries(contentVersions)) {
+    html = html.replaceAll(`{{VER_${k}}}`, v);
+  }
   fs.writeFileSync(path.join(DIST, 'u', `${username}.html`), html);
 });
 console.log(`Generated ${uniqueAuthors.length} author page(s) at /u/`);
@@ -860,6 +899,9 @@ let creatorsHtml = creatorsTemplate
   .replace('{{DEVELOPERS_GRID}}', devCards);
 for (const [k, v] of Object.entries(sriHashes)) {
   creatorsHtml = creatorsHtml.replaceAll(`{{SRI_${k}}}`, v);
+}
+for (const [k, v] of Object.entries(contentVersions)) {
+  creatorsHtml = creatorsHtml.replaceAll(`{{VER_${k}}}`, v);
 }
 fs.writeFileSync(path.join(DIST, 'creators.html'), creatorsHtml);
 console.log(`Generated /creators page (${uniqueAuthors.length} creators)`);
@@ -978,11 +1020,14 @@ fs.writeFileSync(path.join(DIST, '_headers'), [
   `  Content-Security-Policy: ${csp}`,
   `  Content-Security-Policy-Report-Only: ${csp}`,
   '',
-  '# Long cache for static assets (CSS/JS have SRI hashes so stale = harmless)',
+  '# Immutable cache for versioned assets. JS and CSS are referenced with a',
+  '# content-hash query param (?v=<hash>) injected at build time, so the URL',
+  '# changes whenever the file changes. The edge may cache forever — a stale',
+  '# URL is never served because fresh HTML always points at the new URL.',
   '/*.css',
-  '  Cache-Control: public, max-age=86400, stale-while-revalidate=604800',
+  '  Cache-Control: public, max-age=31536000, immutable',
   '/*.js',
-  '  Cache-Control: public, max-age=86400, stale-while-revalidate=604800',
+  '  Cache-Control: public, max-age=31536000, immutable',
   '/*.png',
   '  Cache-Control: public, max-age=604800, immutable',
   '/*.svg',
@@ -990,9 +1035,10 @@ fs.writeFileSync(path.join(DIST, '_headers'), [
   '',
 ].join('\n'));
 
-// Copy static assets. .html files get a substitution pass for {{SRI_*}}
-// placeholders so the integrity attribute matches the just-computed hash —
-// same pipeline as the index template. Everything else is binary-copied.
+// Copy static assets. .html files get a substitution pass for {{SRI_*}} and
+// {{VER_*}} placeholders so integrity attributes and versioned src URLs match
+// the just-computed hashes — same pipeline as the index template. Everything
+// else is binary-copied.
 filesToCopy.forEach(file => {
   const src = path.join(ROOT, file);
   if (!fs.existsSync(src)) return;
@@ -1002,6 +1048,9 @@ filesToCopy.forEach(file => {
     html = injectPartials(html);
     for (const [k, v] of Object.entries(sriHashes)) {
       html = html.replaceAll(`{{SRI_${k}}}`, v);
+    }
+    for (const [k, v] of Object.entries(contentVersions)) {
+      html = html.replaceAll(`{{VER_${k}}}`, v);
     }
     html = html.replaceAll('__CF_BEACON__', CF_BEACON_SNIPPET);
     if (/{{SRI_[A-Z_]+}}/.test(html)) {
@@ -1024,6 +1073,9 @@ if (fs.existsSync(docsSrcDir)) {
     let html = fs.readFileSync(path.join(docsSrcDir, f), 'utf8');
     for (const [k, v] of Object.entries(sriHashes)) {
       html = html.replaceAll(`{{SRI_${k}}}`, v);
+    }
+    for (const [k, v] of Object.entries(contentVersions)) {
+      html = html.replaceAll(`{{VER_${k}}}`, v);
     }
     html = html.replaceAll('__CF_BEACON__', CF_BEACON_SNIPPET);
     fs.writeFileSync(path.join(docsDestDir, f), html);

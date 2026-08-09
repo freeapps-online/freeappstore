@@ -146,7 +146,7 @@
 
   <!-- Per-page data island; read by /detail-page.js. No inline JS so CSP can stay locked. -->
   <script type="application/json" id="page-data">{"id":"{{ID}}"}</script>
-  <script src="/auth.js" integrity="{{SRI_AUTH_JS}}"></script>
-  <script src="/detail-page.js" integrity="{{SRI_DETAIL_PAGE_JS}}" defer></script>
+  <script src="/auth.js?v={{VER_AUTH_JS}}" integrity="{{SRI_AUTH_JS}}"></script>
+  <script src="/detail-page.js?v={{VER_DETAIL_PAGE_JS}}" integrity="{{SRI_DETAIL_PAGE_JS}}" defer></script>
 </body>
 </html>
