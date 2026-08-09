@@ -465,6 +465,27 @@ test("validator rejects duplicate ids and unbounded names", () => {
 // ---------------------------------------------------------------------------
 // CSP compliance — no inline <style> blocks or style="" attributes in HTML
 // ---------------------------------------------------------------------------
+test("app cards carry data-name attribute and sort bar includes A→Z button", () => {
+  const { tmp, tmpDist, registry } = runBuild();
+  try {
+    const indexHtml = readFileSync(join(tmpDist, "index.html"), "utf8");
+    // Every app card should expose its name via data-name for the A→Z sort.
+    for (const app of registry.apps) {
+      assert.ok(
+        indexHtml.includes(`data-name="${app.name}"`),
+        `index.html missing data-name="${app.name}" for app "${app.id}"`,
+      );
+    }
+    // The sort bar must contain the A→Z button.
+    assert.ok(
+      indexHtml.includes('data-sort="az"'),
+      'index.html missing data-sort="az" button in sort bar',
+    );
+  } finally {
+    rmSync(tmp, { recursive: true, force: true });
+  }
+});
+
 test("HTML pages must not use inline styles (CSP: style-src self)", () => {
   const htmlFiles = readdirSync(REPO_ROOT)
     .filter((f) => f.endsWith(".html"))

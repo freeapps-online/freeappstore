@@ -312,7 +312,7 @@ function renderAppCard(app, published) {
   const authAttr = app.requiresAuth ? ' data-requires-auth="1"' : '';
   const publishedAttr = published ? ` data-published="${escapeHtml(published)}"` : '';
   const iconEmoji = app.icon || `&#${(app.name || '?').codePointAt(0)};`;
-  return `        <div class="app-card compact" data-id="${escapeHtml(app.id)}" data-category="${escapeHtml(app.category)}" data-about="/apps/${escapeHtml(app.id)}"${authAttr}${publishedAttr}>
+  return `        <div class="app-card compact" data-id="${escapeHtml(app.id)}" data-name="${escapeHtml(app.name)}" data-category="${escapeHtml(app.category)}" data-about="/apps/${escapeHtml(app.id)}"${authAttr}${publishedAttr}>
           <div class="app-icon" data-letter="${letter}">
             <span class="app-emoji" aria-hidden="true">${iconEmoji}</span>
           </div>

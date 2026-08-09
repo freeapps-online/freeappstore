@@ -87,6 +87,16 @@
           return (a.getAttribute('data-id') || '').localeCompare(b.getAttribute('data-id') || '');
         });
         cards.forEach(function (card) { grid.appendChild(card); });
+      } else if (sort === 'az') {
+        cards.sort(function (a, b) {
+          var na = a.getAttribute('data-name') || a.getAttribute('data-id') || '';
+          var nb = b.getAttribute('data-name') || b.getAttribute('data-id') || '';
+          var cmp = na.localeCompare(nb, undefined, { sensitivity: 'base', numeric: true });
+          if (cmp !== 0) return cmp;
+          // Tie-break by data-id for determinism.
+          return (a.getAttribute('data-id') || '').localeCompare(b.getAttribute('data-id') || '');
+        });
+        cards.forEach(function (card) { grid.appendChild(card); });
       }
     }
 
