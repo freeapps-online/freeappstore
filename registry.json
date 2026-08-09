@@ -1919,6 +1919,20 @@
       "type": "standalone",
       "developer": "FreeAppStore",
       "creatorGithub": "SASASKIA"
+    },
+    {
+      "id": "bag-buddy",
+      "name": "bag-buddy",
+      "category": "Lifestyle",
+      "icon": "🚀",
+      "iconBg": "#f3f4f6",
+      "description": "A fun daily packing checklist for school students — tap items to pack them, add custom items, and celebrate when your bag is ready!",
+      "appUrl": "https://bag-buddy.freeappstore.online",
+      "repo": "freeappstore-online/bag-buddy",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeAppStore",
+      "creatorGithub": "OperationBannana"
     }
   ]
 }
