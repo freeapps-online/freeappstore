@@ -1835,6 +1835,20 @@
       "type": "standalone",
       "developer": "FreeAppStore",
       "creatorGithub": "esmelui"
+    },
+    {
+      "id": "votepool",
+      "name": "votepool",
+      "category": "Social",
+      "icon": "🚀",
+      "iconBg": "#f3f4f6",
+      "description": "Create polls, share a unique link with anyone, and watch votes roll in live — then declare a winner.",
+      "appUrl": "https://votepool.freeappstore.online",
+      "repo": "freeappstore-online/votepool",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeAppStore",
+      "creatorGithub": "buildlessonline-spec"
     }
   ]
 }
