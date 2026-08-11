@@ -4006,36 +4006,36 @@
   "freeappstore-online/taskflow": {
     "meta": {
       "created_at": "2026-07-05T07:55:20Z",
-      "pushed_at": "2026-08-09T02:35:37Z"
+      "pushed_at": "2026-08-11T05:52:52Z"
     },
     "commits": [
       {
-        "sha": "f2cbe90c5bd77635525eb0cc4d7e3de6612518c4",
-        "html_url": "https://github.com/freeappstore-online/taskflow/commit/f2cbe90c5bd77635525eb0cc4d7e3de6612518c4",
+        "sha": "daf23d946ff7d5dc3ef446d7d1883dcc61964344",
+        "html_url": "https://github.com/freeappstore-online/taskflow/commit/daf23d946ff7d5dc3ef446d7d1883dcc61964344",
         "commit": {
-          "message": "dark mode added and project categories",
+          "message": "Polish responsive UI and improve accessibility",
           "author": {
-            "date": "2026-08-04T02:31:04Z"
+            "date": "2026-08-11T05:52:44Z"
           }
         }
       },
       {
-        "sha": "54ffb83ebbd498a9db5b73158b7fa726e10c4eba",
-        "html_url": "https://github.com/freeappstore-online/taskflow/commit/54ffb83ebbd498a9db5b73158b7fa726e10c4eba",
+        "sha": "ed829e68c1e29d6d1a436721717ba294c3e5e479",
+        "html_url": "https://github.com/freeappstore-online/taskflow/commit/ed829e68c1e29d6d1a436721717ba294c3e5e479",
         "commit": {
-          "message": "Improve UI with badges, responsive table, and enhanced user experience",
+          "message": "Improve dashboard analytics and task insights",
           "author": {
-            "date": "2026-07-26T05:08:17Z"
+            "date": "2026-08-11T05:45:24Z"
           }
         }
       },
       {
-        "sha": "0b63be6e10731ef45c9445bb8ccb527f2a68729a",
-        "html_url": "https://github.com/freeappstore-online/taskflow/commit/0b63be6e10731ef45c9445bb8ccb527f2a68729a",
+        "sha": "7f1fd9944440469b943f26f0716c6212db915fc8",
+        "html_url": "https://github.com/freeappstore-online/taskflow/commit/7f1fd9944440469b943f26f0716c6212db915fc8",
         "commit": {
-          "message": "Enhance dashboard with analytics, progress bar, and activity feed",
+          "message": "Improve task table UX with badges, due date indicators, and empty states",
           "author": {
-            "date": "2026-07-26T04:57:45Z"
+            "date": "2026-08-11T05:43:23Z"
           }
         }
       }
@@ -4658,36 +4658,36 @@
   "freeappstore-online/bag-buddy": {
     "meta": {
       "created_at": "2026-08-09T05:54:00Z",
-      "pushed_at": "2026-08-09T06:39:18Z"
+      "pushed_at": "2026-08-11T07:09:23Z"
     },
     "commits": [
       {
-        "sha": "c3a4a594b101f069f46f9dc2af3c739a9b30dc8a",
-        "html_url": "https://github.com/freeappstore-online/bag-buddy/commit/c3a4a594b101f069f46f9dc2af3c739a9b30dc8a",
+        "sha": "a02fa416e4e9e4e1fe08096e102b0e468b25da03",
+        "html_url": "https://github.com/freeappstore-online/bag-buddy/commit/a02fa416e4e9e4e1fe08096e102b0e468b25da03",
         "commit": {
-          "message": "Add reward system with stars, parent-editable rewards, child read-only view, history log",
+          "message": "Add global button hover/click animations: lift + brighten on hover, springy scale-down on click, ripple flash effect on every button",
           "author": {
-            "date": "2026-08-09T06:39:18Z"
+            "date": "2026-08-11T07:09:22Z"
           }
         }
       },
       {
-        "sha": "f2997249b134154b94509f60d051aa6014c1f0b0",
-        "html_url": "https://github.com/freeappstore-online/bag-buddy/commit/f2997249b134154b94509f60d051aa6014c1f0b0",
+        "sha": "ec44402c70da1478498afad9a711138361f59d8c",
+        "html_url": "https://github.com/freeappstore-online/bag-buddy/commit/ec44402c70da1478498afad9a711138361f59d8c",
         "commit": {
-          "message": "Add welcome screen with child/parent role selection, role-based navigation and switch role banner",
+          "message": "Make child side vibrant and fun: colourful checklist cards, animated progress hero, float-up encouragements, fun rewards view, exciting welcome screen",
           "author": {
-            "date": "2026-08-09T06:34:00Z"
+            "date": "2026-08-11T07:02:26Z"
           }
         }
       },
       {
-        "sha": "10352b5e95e109c8211646f0f812dc314adf94ce",
-        "html_url": "https://github.com/freeappstore-online/bag-buddy/commit/10352b5e95e109c8211646f0f812dc314adf94ce",
+        "sha": "594856ea8d0b06752e30b3ead37c7c1614f4f5d5",
+        "html_url": "https://github.com/freeappstore-online/bag-buddy/commit/594856ea8d0b06752e30b3ead37c7c1614f4f5d5",
         "commit": {
-          "message": "Add Parent View with packing progress, missing items, timetable summary and reset button",
+          "message": "Fix welcome flow: parents skip event picker and go straight to dashboard, only children choose an event",
           "author": {
-            "date": "2026-08-09T06:26:51Z"
+            "date": "2026-08-11T06:53:26Z"
           }
         }
       }
