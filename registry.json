@@ -1989,6 +1989,20 @@
       "type": "standalone",
       "developer": "FreeAppStore",
       "creatorGithub": "abid8195"
+    },
+    {
+      "id": "devestimate",
+      "name": "devestimate",
+      "category": "Productivity",
+      "icon": "🚀",
+      "iconBg": "#f3f4f6",
+      "description": "Estimate project time and costs based on project type, features, and hourly rate.",
+      "appUrl": "https://devestimate.freeappstore.online",
+      "repo": "freeappstore-online/devestimate",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeAppStore",
+      "creatorGithub": "DeepAshishThapa"
     }
   ]
 }
