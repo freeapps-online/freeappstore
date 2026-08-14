@@ -4958,5 +4958,23 @@
         }
       }
     ]
+  },
+  "freeappstore-online/devestimate": {
+    "meta": {
+      "created_at": "2026-08-14T11:31:56Z",
+      "pushed_at": "2026-08-14T11:51:54Z"
+    },
+    "commits": [
+      {
+        "sha": "6bba77c59611eaa9c58db80ebebff35d8ecdf6aa",
+        "html_url": "https://github.com/freeappstore-online/devestimate/commit/6bba77c59611eaa9c58db80ebebff35d8ecdf6aa",
+        "commit": {
+          "message": "Initial commit from standalone template",
+          "author": {
+            "date": "2026-07-26T10:18:39Z"
+          }
+        }
+      }
+    ]
   }
 }
