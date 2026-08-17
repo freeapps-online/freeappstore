@@ -4962,16 +4962,36 @@
   "freeappstore-online/devestimate": {
     "meta": {
       "created_at": "2026-08-14T11:31:56Z",
-      "pushed_at": "2026-08-16T11:49:03Z"
+      "pushed_at": "2026-08-17T06:10:35Z"
     },
     "commits": [
       {
-        "sha": "6bba77c59611eaa9c58db80ebebff35d8ecdf6aa",
-        "html_url": "https://github.com/freeappstore-online/devestimate/commit/6bba77c59611eaa9c58db80ebebff35d8ecdf6aa",
+        "sha": "51f2004563d293ce6c864aa809104f38829a6eb6",
+        "html_url": "https://github.com/freeappstore-online/devestimate/commit/51f2004563d293ce6c864aa809104f38829a6eb6",
         "commit": {
-          "message": "Initial commit from standalone template",
+          "message": "Add project and feature types, estimation options, and project estimate calculation service.\n\nFeature/estimate core",
           "author": {
-            "date": "2026-07-26T10:18:39Z"
+            "date": "2026-08-17T06:10:35Z"
+          }
+        }
+      },
+      {
+        "sha": "2c92ac66b32fe7ffd31339ad9f6dd2850ffcf518",
+        "html_url": "https://github.com/freeappstore-online/devestimate/commit/2c92ac66b32fe7ffd31339ad9f6dd2850ffcf518",
+        "commit": {
+          "message": "feat(estimate): add project estimate calculation service",
+          "author": {
+            "date": "2026-08-17T05:55:14Z"
+          }
+        }
+      },
+      {
+        "sha": "ad5a5f1826c66a4718145a030773b0101fb3db7e",
+        "html_url": "https://github.com/freeappstore-online/devestimate/commit/ad5a5f1826c66a4718145a030773b0101fb3db7e",
+        "commit": {
+          "message": "feat(estimate): add estimation types and options data",
+          "author": {
+            "date": "2026-08-16T11:48:02Z"
           }
         }
       }
