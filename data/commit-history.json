@@ -4996,5 +4996,43 @@
         }
       }
     ]
+  },
+  "freeappstore-online/datalens": {
+    "meta": {
+      "created_at": "2026-08-23T07:34:35Z",
+      "pushed_at": "2026-08-23T08:40:29Z"
+    },
+    "commits": [
+      {
+        "sha": "a23f73db3b99a0bb6e4ac47fb58eccf3a219388a",
+        "html_url": "https://github.com/freeappstore-online/datalens/commit/a23f73db3b99a0bb6e4ac47fb58eccf3a219388a",
+        "commit": {
+          "message": "Add Excel (.xlsx) import\n\nRead xlsx with a hand-written zip reader over the platform's\nDecompressionStream, plus an XML reader for shared strings, styles,\nand sheet cells. Handles date-formatted cells (built-in and custom\nnumber formats), booleans, inline strings, and sparse cells.\n\nTrailing cells omitted by Excel are padded to the header width so\nordinary blanks are not reported as ragged-row import warnings.\n\nShips pipeline.xlsx as a third one-click sample.",
+          "author": {
+            "date": "2026-08-23T08:40:21Z"
+          }
+        }
+      },
+      {
+        "sha": "c9a1ede99d468300f5b08ff2323060579ee07116",
+        "html_url": "https://github.com/freeappstore-online/datalens/commit/c9a1ede99d468300f5b08ff2323060579ee07116",
+        "commit": {
+          "message": "Add one-click sample dataset buttons to the empty state\n\nMove samples into web/public/samples/ so they ship with the app, add\nTry a sample CSV / JSON buttons that fetch and load them, and include\ncsv in the Workbox globPatterns so they work offline.",
+          "author": {
+            "date": "2026-08-23T07:54:28Z"
+          }
+        }
+      },
+      {
+        "sha": "8cec2c973e153208718e24d1944a2bca8118c17d",
+        "html_url": "https://github.com/freeappstore-online/datalens/commit/8cec2c973e153208718e24d1944a2bca8118c17d",
+        "commit": {
+          "message": "Add FreeAppStore R2 deploy workflow",
+          "author": {
+            "date": "2026-08-23T07:38:17Z"
+          }
+        }
+      }
+    ]
   }
 }
