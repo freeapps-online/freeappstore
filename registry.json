@@ -2003,6 +2003,20 @@
       "type": "standalone",
       "developer": "FreeAppStore",
       "creatorGithub": "DeepAshishThapa"
+    },
+    {
+      "id": "datalens",
+      "name": "datalens",
+      "category": "Productivity",
+      "icon": "🚀",
+      "iconBg": "#f3f4f6",
+      "description": " a privacy-first CSV/JSON tool that will turn any messy datsets into an easily understandable dashboard",
+      "appUrl": "https://datalens.freeappstore.online",
+      "repo": "freeappstore-online/datalens",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeAppStore",
+      "creatorGithub": "abid8195"
     }
   ]
 }
