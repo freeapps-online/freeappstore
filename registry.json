@@ -2017,6 +2017,20 @@
       "type": "standalone",
       "developer": "FreeAppStore",
       "creatorGithub": "abid8195"
+    },
+    {
+      "id": "decision-compass",
+      "name": "decision-compass",
+      "category": "Productivity",
+      "icon": "🚀",
+      "iconBg": "#f3f4f6",
+      "description": "A private, structured tool for making thoughtful decisions and reflecting on the choices you make.",
+      "appUrl": "https://decision-compass.freeappstore.online",
+      "repo": "freeappstore-online/decision-compass",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeAppStore",
+      "creatorGithub": "jessicacastello"
     }
   ]
 }
