@@ -4962,36 +4962,36 @@
   "freeappstore-online/devestimate": {
     "meta": {
       "created_at": "2026-08-14T11:31:56Z",
-      "pushed_at": "2026-08-20T11:08:44Z"
+      "pushed_at": "2026-08-30T11:28:12Z"
     },
     "commits": [
       {
-        "sha": "51f2004563d293ce6c864aa809104f38829a6eb6",
-        "html_url": "https://github.com/freeappstore-online/devestimate/commit/51f2004563d293ce6c864aa809104f38829a6eb6",
+        "sha": "bdcb993b3f4020ecd117d01b5f8649d2453bfe2c",
+        "html_url": "https://github.com/freeappstore-online/devestimate/commit/bdcb993b3f4020ecd117d01b5f8649d2453bfe2c",
         "commit": {
-          "message": "Add project and feature types, estimation options, and project estimate calculation service.\n\nFeature/estimate core",
+          "message": "Merge pull request #2 from freeappstore-online/feature-estimate\n\nFeature estimate",
           "author": {
-            "date": "2026-08-17T06:10:35Z"
+            "date": "2026-08-30T11:28:12Z"
           }
         }
       },
       {
-        "sha": "2c92ac66b32fe7ffd31339ad9f6dd2850ffcf518",
-        "html_url": "https://github.com/freeappstore-online/devestimate/commit/2c92ac66b32fe7ffd31339ad9f6dd2850ffcf518",
+        "sha": "3ab77281b058a22e54cae2102e4ecb63b6d9d59c",
+        "html_url": "https://github.com/freeappstore-online/devestimate/commit/3ab77281b058a22e54cae2102e4ecb63b6d9d59c",
         "commit": {
-          "message": "feat(estimate): add project estimate calculation service",
+          "message": "feat(estimate): implement EstimateForm component for project cost estimation",
           "author": {
-            "date": "2026-08-17T05:55:14Z"
+            "date": "2026-08-30T11:03:25Z"
           }
         }
       },
       {
-        "sha": "ad5a5f1826c66a4718145a030773b0101fb3db7e",
-        "html_url": "https://github.com/freeappstore-online/devestimate/commit/ad5a5f1826c66a4718145a030773b0101fb3db7e",
+        "sha": "dea0b1aa437f137f1770701137a4959d6625fa4d",
+        "html_url": "https://github.com/freeappstore-online/devestimate/commit/dea0b1aa437f137f1770701137a4959d6625fa4d",
         "commit": {
-          "message": "feat(estimate): add estimation types and options data",
+          "message": "feat(ui): add AppShell component with sticky header and layout constraints",
           "author": {
-            "date": "2026-08-16T11:48:02Z"
+            "date": "2026-08-30T11:02:12Z"
           }
         }
       }
@@ -5066,26 +5066,36 @@
   "freeappstore-online/kpop-diary": {
     "meta": {
       "created_at": "2026-08-30T04:30:00Z",
-      "pushed_at": "2026-08-30T04:30:20Z"
+      "pushed_at": "2026-08-30T06:50:11Z"
     },
     "commits": [
       {
-        "sha": "8e479bb1219b378fc28316a981127b44f75b0ec0",
-        "html_url": "https://github.com/freeappstore-online/kpop-diary/commit/8e479bb1219b378fc28316a981127b44f75b0ec0",
+        "sha": "09c70a139567f18d3e24257a64b6cf89f62c4845",
+        "html_url": "https://github.com/freeappstore-online/kpop-diary/commit/09c70a139567f18d3e24257a64b6cf89f62c4845",
         "commit": {
-          "message": "Initial app — built with FreeAppStore AI agent",
+          "message": "Fix home feed images: remove container height so full image shows with no cropping",
           "author": {
-            "date": "2026-08-30T04:30:19Z"
+            "date": "2026-08-30T06:50:10Z"
           }
         }
       },
       {
-        "sha": "9629e3c04219e4dfba7de0350ee9f6ea8fbe5521",
-        "html_url": "https://github.com/freeappstore-online/kpop-diary/commit/9629e3c04219e4dfba7de0350ee9f6ea8fbe5521",
+        "sha": "9395323466e437eb8eab679ceee6633e383b849e",
+        "html_url": "https://github.com/freeappstore-online/kpop-diary/commit/9395323466e437eb8eab679ceee6633e383b849e",
         "commit": {
-          "message": "Initial commit",
+          "message": "Discover page shows all your posts in a grid; home feed shows full uncropped images",
           "author": {
-            "date": "2026-08-30T04:30:01Z"
+            "date": "2026-08-30T06:47:55Z"
+          }
+        }
+      },
+      {
+        "sha": "91f315d5d7862357add77f4119d3de4ded0b3703",
+        "html_url": "https://github.com/freeappstore-online/kpop-diary/commit/91f315d5d7862357add77f4119d3de4ded0b3703",
+        "commit": {
+          "message": "Add Save Everything button + avatar frames + auto-save with toast confirmation",
+          "author": {
+            "date": "2026-08-30T06:04:24Z"
           }
         }
       }
@@ -5094,9 +5104,19 @@
   "freeappstore-online/soundboard-pro": {
     "meta": {
       "created_at": "2026-08-30T05:48:40Z",
-      "pushed_at": "2026-08-30T05:48:58Z"
+      "pushed_at": "2026-08-30T06:17:28Z"
     },
     "commits": [
+      {
+        "sha": "48b383b9a2d074579ef053cd1c58d589fd5e8bca",
+        "html_url": "https://github.com/freeappstore-online/soundboard-pro/commit/48b383b9a2d074579ef053cd1c58d589fd5e8bca",
+        "commit": {
+          "message": "Replace Contact Form with Audio Recording & Assignment Dashboard — new recorder UI with Start/Pause/Stop/Save controls, Event Assignment Panel for Form Success & Error events, Saved Clips Library",
+          "author": {
+            "date": "2026-08-30T06:17:27Z"
+          }
+        }
+      },
       {
         "sha": "959c0ff3a46cf15f1acd60571c8369f2a1e2ab30",
         "html_url": "https://github.com/freeappstore-online/soundboard-pro/commit/959c0ff3a46cf15f1acd60571c8369f2a1e2ab30",
@@ -5114,6 +5134,34 @@
           "message": "Initial commit",
           "author": {
             "date": "2026-08-30T05:48:41Z"
+          }
+        }
+      }
+    ]
+  },
+  "freeappstore-online/taskflow-manager": {
+    "meta": {
+      "created_at": "2026-08-30T05:48:44Z",
+      "pushed_at": "2026-08-30T05:49:07Z"
+    },
+    "commits": [
+      {
+        "sha": "7780fc67cc9768420b8e5a5f4fd827b10157520c",
+        "html_url": "https://github.com/freeappstore-online/taskflow-manager/commit/7780fc67cc9768420b8e5a5f4fd827b10157520c",
+        "commit": {
+          "message": "Initial app — built with FreeAppStore AI agent",
+          "author": {
+            "date": "2026-08-30T05:49:06Z"
+          }
+        }
+      },
+      {
+        "sha": "a521484fe56a5ddf66a0dd3d4aaf631dc04de0da",
+        "html_url": "https://github.com/freeappstore-online/taskflow-manager/commit/a521484fe56a5ddf66a0dd3d4aaf631dc04de0da",
+        "commit": {
+          "message": "Initial commit",
+          "author": {
+            "date": "2026-08-30T05:48:45Z"
           }
         }
       }
