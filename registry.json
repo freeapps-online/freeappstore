@@ -2059,6 +2059,20 @@
       "type": "standalone",
       "developer": "FreeAppStore",
       "creatorGithub": "imhappyamber-design"
+    },
+    {
+      "id": "taskflow-manager",
+      "name": "taskflow-manager",
+      "category": "Productivity",
+      "icon": "🚀",
+      "iconBg": "#f3f4f6",
+      "description": "Production-ready project & task manager with Kanban board, calendar, analytics dashboard, and offline-first storage.",
+      "appUrl": "https://taskflow-manager.freeappstore.online",
+      "repo": "freeappstore-online/taskflow-manager",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeAppStore",
+      "creatorGithub": "imhappyamber-design"
     }
   ]
 }
