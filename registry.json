@@ -2045,6 +2045,20 @@
       "type": "standalone",
       "developer": "FreeAppStore",
       "creatorGithub": "BUDDY-KIWI-BERRY"
+    },
+    {
+      "id": "soundboard-pro",
+      "name": "soundboard-pro",
+      "category": "Utilities",
+      "icon": "🚀",
+      "iconBg": "#f3f4f6",
+      "description": "A comprehensive audio manager with preset sound effects, in-app microphone recording, and per-event sound assignments — all stored locally, zero uploads.",
+      "appUrl": "https://soundboard-pro.freeappstore.online",
+      "repo": "freeappstore-online/soundboard-pro",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeAppStore",
+      "creatorGithub": "imhappyamber-design"
     }
   ]
 }
