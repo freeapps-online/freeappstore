@@ -2031,6 +2031,20 @@
       "type": "standalone",
       "developer": "FreeAppStore",
       "creatorGithub": "jessicacastello"
+    },
+    {
+      "id": "kpop-diary",
+      "name": "kpop-diary",
+      "category": "Lifestyle",
+      "icon": "🚀",
+      "iconBg": "#f3f4f6",
+      "description": "Your private K-pop world — create posts, collect idols, write journal entries, edit photos with filters & stickers, and more.",
+      "appUrl": "https://kpop-diary.freeappstore.online",
+      "repo": "freeappstore-online/kpop-diary",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeAppStore",
+      "creatorGithub": "BUDDY-KIWI-BERRY"
     }
   ]
 }
