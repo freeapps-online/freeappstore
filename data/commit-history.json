@@ -5166,5 +5166,43 @@
         }
       }
     ]
+  },
+  "freeappstore-online/learner-coder": {
+    "meta": {
+      "created_at": "2026-08-31T13:54:04Z",
+      "pushed_at": "2026-08-31T13:55:12Z"
+    },
+    "commits": [
+      {
+        "sha": "a3c30a0fe851d9281050d0abb342e46f304ff054",
+        "html_url": "https://github.com/freeappstore-online/learner-coder/commit/a3c30a0fe851d9281050d0abb342e46f304ff054",
+        "commit": {
+          "message": "Fix PWA maskable icon compliance check\n\nDeclares purpose on both manifest icons (\"any\" for 192px, \"any\nmaskable\" for 512px) so Android Chrome installs the app as a real\nPWA instead of a plain launcher shortcut.\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-08-31T13:52:48Z"
+          }
+        }
+      },
+      {
+        "sha": "bf9a78a41f4b440531eb98511241d7f33b1c190b",
+        "html_url": "https://github.com/freeappstore-online/learner-coder/commit/bf9a78a41f4b440531eb98511241d7f33b1c190b",
+        "commit": {
+          "message": "Build interactive coding curriculum with local-only progress tracking\n\nAdds onboarding, course catalog, and lesson flows backed entirely by\nlocalStorage (no auth/server dependency). Each lesson ends in a real\ncoding exercise run live in the browser: HTML/CSS render in a\nsandboxed iframe, JS runs in an isolated Function scope, and Python\nruns via Pyodide (WASM), all graded automatically to unlock progress.\n\nHTML/CSS exercises open their preview in a floating, draggable and\nresizable window styled like a real OS window, confined to the\nviewport and initially sized to the IDE pane. The code editor uses\nPrism.js for Monokai syntax highlighting.\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>",
+          "author": {
+            "date": "2026-08-31T13:51:14Z"
+          }
+        }
+      },
+      {
+        "sha": "6df40583fddb180bfe27d2a1ca10c7a2b440685e",
+        "html_url": "https://github.com/freeappstore-online/learner-coder/commit/6df40583fddb180bfe27d2a1ca10c7a2b440685e",
+        "commit": {
+          "message": "Initial commit from standalone template",
+          "author": {
+            "date": "2026-08-27T04:09:09Z"
+          }
+        }
+      }
+    ]
   }
 }
