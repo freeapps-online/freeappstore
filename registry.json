@@ -2073,6 +2073,20 @@
       "type": "standalone",
       "developer": "FreeAppStore",
       "creatorGithub": "imhappyamber-design"
+    },
+    {
+      "id": "learner-coder",
+      "name": "learner-coder",
+      "category": "Learning",
+      "icon": "🚀",
+      "iconBg": "#f3f4f6",
+      "description": "Free code learning app.",
+      "appUrl": "https://learner-coder.freeappstore.online",
+      "repo": "freeappstore-online/learner-coder",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeAppStore",
+      "creatorGithub": "dawsonhuang0"
     }
   ]
 }
