@@ -2087,6 +2087,20 @@
       "type": "standalone",
       "developer": "FreeAppStore",
       "creatorGithub": "dawsonhuang0"
+    },
+    {
+      "id": "formulapad",
+      "name": "formulapad",
+      "category": "Learning",
+      "icon": "🚀",
+      "iconBg": "#f3f4f6",
+      "description": "Interactive STEM formula and physics calculator with real-time visual simulations.",
+      "appUrl": "https://formulapad.freeappstore.online",
+      "repo": "freeappstore-online/formulapad",
+      "hostedOn": "r2",
+      "type": "standalone",
+      "developer": "FreeAppStore",
+      "creatorGithub": "Abrarcancode67"
     }
   ]
 }
