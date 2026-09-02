@@ -5208,36 +5208,36 @@
   "freeappstore-online/formulapad": {
     "meta": {
       "created_at": "2026-09-02T09:50:21Z",
-      "pushed_at": "2026-09-02T14:21:48Z"
+      "pushed_at": "2026-09-02T17:39:48Z"
     },
     "commits": [
       {
-        "sha": "545c0bf2253e1ff8e097164f49e138a32daef157",
-        "html_url": "https://github.com/freeappstore-online/formulapad/commit/545c0bf2253e1ff8e097164f49e138a32daef157",
+        "sha": "4850a2bb755ea5ba529eddb0552a9c09793da539",
+        "html_url": "https://github.com/freeappstore-online/formulapad/commit/4850a2bb755ea5ba529eddb0552a9c09793da539",
         "commit": {
-          "message": "fix: enforce zinc-100 labels in ParamControl and eliminate duplicate symbols",
+          "message": "fix: trim trailing symbol names in coefficient and side labels",
           "author": {
-            "date": "2026-09-02T14:19:28Z"
+            "date": "2026-09-02T17:39:38Z"
           }
         }
       },
       {
-        "sha": "b567fa486e631411d06d0114e89ceaa89c23e432",
-        "html_url": "https://github.com/freeappstore-online/formulapad/commit/b567fa486e631411d06d0114e89ceaa89c23e432",
+        "sha": "406e717a8fc789e377aeda15a5c9807140f29b8f",
+        "html_url": "https://github.com/freeappstore-online/formulapad/commit/406e717a8fc789e377aeda15a5c9807140f29b8f",
         "commit": {
-          "message": "fix: resolve duplicate parameter symbols and labels",
+          "message": "fix: use cleanLabel regex to eliminate duplicate symbols across all math formulas",
           "author": {
-            "date": "2026-09-02T14:04:45Z"
+            "date": "2026-09-02T17:28:44Z"
           }
         }
       },
       {
-        "sha": "de02162e6a14b2613d1a2d5d3987746549429c10",
-        "html_url": "https://github.com/freeappstore-online/formulapad/commit/de02162e6a14b2613d1a2d5d3987746549429c10",
+        "sha": "8eb016966ee7839512f089cd31d603f4de446ba4",
+        "html_url": "https://github.com/freeappstore-online/formulapad/commit/8eb016966ee7839512f089cd31d603f4de446ba4",
         "commit": {
-          "message": "fix: set pnpm version to 10 in deployment action",
+          "message": "fix: sanitize duplicate parameter symbols across all math and chemistry formulas",
           "author": {
-            "date": "2026-09-02T13:04:28Z"
+            "date": "2026-09-02T17:10:18Z"
           }
         }
       }
