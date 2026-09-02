@@ -5170,36 +5170,36 @@
   "freeappstore-online/learner-coder": {
     "meta": {
       "created_at": "2026-08-31T13:54:04Z",
-      "pushed_at": "2026-08-31T13:55:12Z"
+      "pushed_at": "2026-09-02T12:40:58Z"
     },
     "commits": [
       {
-        "sha": "a3c30a0fe851d9281050d0abb342e46f304ff054",
-        "html_url": "https://github.com/freeappstore-online/learner-coder/commit/a3c30a0fe851d9281050d0abb342e46f304ff054",
+        "sha": "c05316d62df6aaa8a5b9e8d51334c035719588b2",
+        "html_url": "https://github.com/freeappstore-online/learner-coder/commit/c05316d62df6aaa8a5b9e8d51334c035719588b2",
         "commit": {
-          "message": "Fix PWA maskable icon compliance check\n\nDeclares purpose on both manifest icons (\"any\" for 192px, \"any\nmaskable\" for 512px) so Android Chrome installs the app as a real\nPWA instead of a plain launcher shortcut.\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>",
+          "message": "Fix Monaco IntelliSense under CSP by never loading the worker-based services\n\nRoot cause, confirmed by reading both the live production console and\nMonaco's own CDN bundle source: this app's CSP has no worker-src\ndirective (falls back to script-src, no blob: allowance), and Monaco's\nrich HTML/CSS/JS/TypeScript language services always bootstrap their\nWeb Worker via a blob: wrapper — confirmed this happens even when\nMonaco is self-hosted same-origin, so it isn't a cross-origin\nworkaround, just how Monaco starts every worker. That wrapper is\nblocked outright, and the resulting error-triggered fallback leaves\nthe suggest widget non-functional (previous commit's\nMonacoEnvironment.getWorker override didn't help: returning undefined\nisn't a supported \"disable\" signal in this version, it just moves the\ncrash to `.postMessage()` on undefined).\n\nThe fix bundles a custom Monaco entry point (lib/monacoCore.ts) built\nfrom this exact monaco-editor version's own editor.main.js, keeping\nits generic editing UI contributions (suggest widget, hover, find,\nsnippets, etc. — none of which are worker-based) and its Monarch-only\n\"basic languages\" tokenizers, while dropping the four\nlanguages/features/{css,html,json,typescript} imports that are the\nactual worker-dependent ones. Zero worker usage, zero CSP dependence,\nidentical behavior in dev and prod. HTML/CSS/JS get their own static\ncompletion providers in place of those services' real semantic ones\n(Python's Jedi-backed provider was already worker-free and unaffected).\n\nMonaco is lazy-loaded via React.lazy() (CodePlayground.tsx) so this\nmulti-MB bundle only downloads once a lesson's editor actually\nrenders, not as part of the app's initial load.\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>",
           "author": {
-            "date": "2026-08-31T13:52:48Z"
+            "date": "2026-09-02T12:40:56Z"
           }
         }
       },
       {
-        "sha": "bf9a78a41f4b440531eb98511241d7f33b1c190b",
-        "html_url": "https://github.com/freeappstore-online/learner-coder/commit/bf9a78a41f4b440531eb98511241d7f33b1c190b",
+        "sha": "6dab6e50c032c3cb9f03e325635ede65d6af97c3",
+        "html_url": "https://github.com/freeappstore-online/learner-coder/commit/6dab6e50c032c3cb9f03e325635ede65d6af97c3",
         "commit": {
-          "message": "Build interactive coding curriculum with local-only progress tracking\n\nAdds onboarding, course catalog, and lesson flows backed entirely by\nlocalStorage (no auth/server dependency). Each lesson ends in a real\ncoding exercise run live in the browser: HTML/CSS render in a\nsandboxed iframe, JS runs in an isolated Function scope, and Python\nruns via Pyodide (WASM), all graded automatically to unlock progress.\n\nHTML/CSS exercises open their preview in a floating, draggable and\nresizable window styled like a real OS window, confined to the\nviewport and initially sized to the IDE pane. The code editor uses\nPrism.js for Monokai syntax highlighting.\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>",
+          "message": "Fix Monaco IntelliSense breaking under CSP-restricted hosting\n\nRoot cause found by testing the live production console: this app's\nCSP has no worker-src directive, so it falls back to script-src (no\nblob: allowance). Monaco's default behavior is to attempt a real Web\nWorker first and only fall back once construction throws — but that\nerror-triggered fallback leaves the editor in a half-broken state\n(confirmed on prod: an uncaught event follows, and the suggest widget\nstops responding for HTML/CSS/JS, though the editor still renders and\nhighlights).\n\nDeclaring MonacoEnvironment.getWorker to return undefined *before*\nMonaco ever attempts a worker takes a different, clean in-process\ncode path instead — verified locally to preserve full real semantic\ncompletions (including full TypeScript signatures), just executed on\nthe main thread. Since that alone fully restores native IntelliSense\neverywhere, the static worker-free fallback providers added in the\nprevious commit are now redundant (they were only producing duplicate\nsuggestions) and are removed.\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>",
           "author": {
-            "date": "2026-08-31T13:51:14Z"
+            "date": "2026-09-02T11:55:00Z"
           }
         }
       },
       {
-        "sha": "6df40583fddb180bfe27d2a1ca10c7a2b440685e",
-        "html_url": "https://github.com/freeappstore-online/learner-coder/commit/6df40583fddb180bfe27d2a1ca10c7a2b440685e",
+        "sha": "580657547b65f2f6ead6ef37bac74ce191e600ad",
+        "html_url": "https://github.com/freeappstore-online/learner-coder/commit/580657547b65f2f6ead6ef37bac74ce191e600ad",
         "commit": {
-          "message": "Initial commit from standalone template",
+          "message": "Add worker-free IntelliSense fallback for HTML/CSS/JS\n\nFreeAppStore's hosting CSP has no worker-src directive, so it falls\nback to script-src — which doesn't allow blob:. Monaco's built-in\nHTML/CSS/JS language services run inside a Web Worker created from a\nblob URL, so they're silently blocked in production even though they\nwork fine in local dev (confirmed via the browser console on the live\nsite: \"Creating a worker from 'blob:...' violates ... script-src\").\nPython's Jedi-backed completions were unaffected since they never use\na Monaco worker at all — they call into the already-loaded Pyodide\nruntime directly.\n\nAdds static, worker-free completion providers for HTML tags, CSS\nproperties, and JS keywords/common members, registered alongside (not\ninstead of) Monaco's built-ins — same worker-free approach as Python,\nso completions keep working under this CSP while dev still gets\nMonaco's richer native ones layered on top.\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>",
           "author": {
-            "date": "2026-08-27T04:09:09Z"
+            "date": "2026-09-02T11:37:31Z"
           }
         }
       }
@@ -5208,36 +5208,36 @@
   "freeappstore-online/formulapad": {
     "meta": {
       "created_at": "2026-09-02T09:50:21Z",
-      "pushed_at": "2026-09-02T10:49:01Z"
+      "pushed_at": "2026-09-02T14:21:48Z"
     },
     "commits": [
       {
-        "sha": "91930b655b8b8f9ef6592cf14c14eebce237a31b",
-        "html_url": "https://github.com/freeappstore-online/formulapad/commit/91930b655b8b8f9ef6592cf14c14eebce237a31b",
+        "sha": "545c0bf2253e1ff8e097164f49e138a32daef157",
+        "html_url": "https://github.com/freeappstore-online/formulapad/commit/545c0bf2253e1ff8e097164f49e138a32daef157",
         "commit": {
-          "message": "fix: update app name to formulapad",
+          "message": "fix: enforce zinc-100 labels in ParamControl and eliminate duplicate symbols",
           "author": {
-            "date": "2026-09-02T10:48:46Z"
+            "date": "2026-09-02T14:19:28Z"
           }
         }
       },
       {
-        "sha": "756f75248d7cea81574cb7f19231e7e375edce4c",
-        "html_url": "https://github.com/freeappstore-online/formulapad/commit/756f75248d7cea81574cb7f19231e7e375edce4c",
+        "sha": "b567fa486e631411d06d0114e89ceaa89c23e432",
+        "html_url": "https://github.com/freeappstore-online/formulapad/commit/b567fa486e631411d06d0114e89ceaa89c23e432",
         "commit": {
-          "message": "fix: set app name to formulapad and route dist assets",
+          "message": "fix: resolve duplicate parameter symbols and labels",
           "author": {
-            "date": "2026-09-02T10:32:51Z"
+            "date": "2026-09-02T14:04:45Z"
           }
         }
       },
       {
-        "sha": "a582ae08506e170028c06e938c89748fad8579c4",
-        "html_url": "https://github.com/freeappstore-online/formulapad/commit/a582ae08506e170028c06e938c89748fad8579c4",
+        "sha": "de02162e6a14b2613d1a2d5d3987746549429c10",
+        "html_url": "https://github.com/freeappstore-online/formulapad/commit/de02162e6a14b2613d1a2d5d3987746549429c10",
         "commit": {
-          "message": "fix: align package name with app id formulapad",
+          "message": "fix: set pnpm version to 10 in deployment action",
           "author": {
-            "date": "2026-09-02T10:24:19Z"
+            "date": "2026-09-02T13:04:28Z"
           }
         }
       }
