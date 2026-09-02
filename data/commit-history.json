@@ -5204,5 +5204,43 @@
         }
       }
     ]
+  },
+  "freeappstore-online/formulapad": {
+    "meta": {
+      "created_at": "2026-09-02T09:50:21Z",
+      "pushed_at": "2026-09-02T10:49:01Z"
+    },
+    "commits": [
+      {
+        "sha": "91930b655b8b8f9ef6592cf14c14eebce237a31b",
+        "html_url": "https://github.com/freeappstore-online/formulapad/commit/91930b655b8b8f9ef6592cf14c14eebce237a31b",
+        "commit": {
+          "message": "fix: update app name to formulapad",
+          "author": {
+            "date": "2026-09-02T10:48:46Z"
+          }
+        }
+      },
+      {
+        "sha": "756f75248d7cea81574cb7f19231e7e375edce4c",
+        "html_url": "https://github.com/freeappstore-online/formulapad/commit/756f75248d7cea81574cb7f19231e7e375edce4c",
+        "commit": {
+          "message": "fix: set app name to formulapad and route dist assets",
+          "author": {
+            "date": "2026-09-02T10:32:51Z"
+          }
+        }
+      },
+      {
+        "sha": "a582ae08506e170028c06e938c89748fad8579c4",
+        "html_url": "https://github.com/freeappstore-online/formulapad/commit/a582ae08506e170028c06e938c89748fad8579c4",
+        "commit": {
+          "message": "fix: align package name with app id formulapad",
+          "author": {
+            "date": "2026-09-02T10:24:19Z"
+          }
+        }
+      }
+    ]
   }
 }
